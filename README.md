@@ -1,108 +1,198 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Game Base
 
-Welcome USER_NAME,
+This website is a full stack ecommerce store to allow people to buy house plants and plant related homeware from the mockup plant company Deilen (the Welsh word for 'leaf').
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+To visit the website, please visit the deployed site [here](insert link to deployed site).
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive Mockup](documentation/testing/responsive-mockup.png)
 
-## Gitpod Reminders
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Stories
 
-`python3 -m http.server`
+As a user of the Deilen website, I want to:
+  1. ?
+  2. ?
+  3. ?
+  4. ?
+  5. ?
+  6. ?
+  7. ?
+  8. ?
 
-A blue button should appear to click: _Make Public_,
+***
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Colour Scheme
+- A earthy and natural blend of greens, browns and greys. This gives the website a fresh, organic and natural look.
+    >![colour palette](documentation/testing/color-palette.png)
+- No accessibility issues were returned when passing the colour scheme through the official [WebAIM](https://webaim.org/resources/contrastchecker/).
+    >![webaim screenshot](documentation/testing/webaim-screenshot.png)
 
-A blue button should appear to click: _Make Public_,
+### Typography
 
-Another blue button should appear to click: _Open Browser_.
+- Google Fonts
+  Font styles were taken from the open source [Google Fonts](https://fonts.google.com/).
+  - the typography for the text throughout the website is [Font Name](Link To Font). Small blurb about font.
+  - The typography for the brand logo is font-family [Font Name](Link To Font). Small blurb about font.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+***
 
-To log into the Heroku toolbelt CLI:
+### Wireframes
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Home wireframe
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ ![Home wireframe](documentation/wireframes/deilen-home-wireframe.png)
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ - Products wireframe
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ ![Products wireframe](documentation/wireframes/deilen-products-wireframe.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ - Mobile shopping bag wireframe
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ ![Mobile shopping bag wireframe](documentation/wireframes/deilen-shopping-bag-mobile-wireframe.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+***
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Database Model
+- Database schema for Deilen
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ ![database schema](documentation/wireframes/deilen_schema.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+***
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Features 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Existing Features 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+__Feature__
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+  - Describe the feature and what it allows a user to do.
+  - Does the feature have any defensive programming?
 
-------
+  ![Picture of feature](documentation/testing/example.png)
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+### Admin Features
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Description of what admins have control over
 
-**How will this affect me?**
+__Feature__
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+  - Describe the feature and what it allows a admin to do.
+  - Does the feature have any defensive programming?
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  ![Picture of feature](documentation/testing/example.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Features Left to Implement 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- Describe the feature
+  - Why hasn't it yet been implemented and what steps would you take to start implementing this feature.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+***
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Technologies
+- [HTML](https://en.wikipedia.org/wiki/HTML) was used as the markup language
+- [CSS](https://en.wikipedia.org/wiki/CSS) was used for custom styling
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
+- [GitPod](https://gitpod.io) was used as a cloud based iDE
+- [GitHub](https://github.com/) was used to manage the Git repository
+- [Heroku](https://gamebase-storage.herokuapp.com/) was used for deployment
+- [Git](https://git-scm.com/) was used for version control
+- [Python](https://www.python.org/downloads/) used as ...
+- [Django](https://www.djangoproject.com/) used as ...
+- [Pip3](https://pip.pypa.io/en/stable/) was the package manager used to install the dependencies
+- [Bootstrap](https://getbootstrap.com/) was used for website layout and responsive components
+- [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
+- [Am I Responsive](http://ami.responsivedesign.is/) was used to generate a mock-up image
+- [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness
+- [Lucidspark](https://lucidspark.com/) was used for creating wireframes and schema diagrams
 
-**Anything more?**
+***
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Testing
 
----
+To view all testing documentation, refer to [TESTING.md](TESTING.md).
 
-Happy coding!
+***
+
+## Deployment
+
+The site was deployed to Heroku. The live link can be found [here](https://gamebase-storage.herokuapp.com/)
+
+The steps to deploy a Heroku app are as follows: 
+1.  Log in to Heroku or create an account if required.
+2.  Create a Heroku app - select 'New', from the drop-down menu select Create New App. The app name provided must be unique.
+3.  Select a region.
+4.  Create.
+5.  Navigate to the Resources tab and add a Heroku PostgreSQL database.
+6.  Access the Settings Tab and find the Config Vars. For this project you will need the following config vars:
+    *   MONGO_DBNAME = the name of your mongo database.
+    *   MONGO_URI = the uri for your mongo database.
+    *   DATABASE_URL = the url of your heroku postgres database.
+    *   SECRET_KEY = a secret key for your app.
+    *   PORT = 5000
+    *   DEBUG = set to 'True' during development and 'False' upon deployment.
+    *   IP = Your IP address
+
+  Please see this [official documentation](https://devcenter.heroku.com/articles/config-vars) on Heroku configuration for more details.
+
+7.  Navigate to the Deploy tab.
+8.  Select Github as the deployment method.
+9.  Follow steps to link to the appropriate GitHub account.
+12. If you wish, enable Automatic Deploys for automatic deployment when you push updates to Github. Or alternatively, select the correct branch for deployment from the drop-down menu and click Deploy Branch for manual deployment.
+
+Final steps: 
+1. Create a Procfile in your repository containing `web: python run.py` so that Heroku will identify the app as a Python app.
+2. Create an untracked file called env.py in your repo and input the config vars you previously established in Heroku.
+3. Create a requirements.txt file
+    - If you want to freeze your own packages into this file, run `pip3 freeze --local > requirements.txt` in the console.
+    - To install only the packages that are already listed in the GameBase repo requirements (if making a local copy/clone) run `pip3 install -r requirements.txt` in the console.
+
+### Cloning
+
+Cloning a repository makes it easier to contribute, fix merge conflicts, add or remove files, and push larger commits. To clone this repository from GitHub to a local computer use the following steps:
+
+1.  On GitHub, navigate to the main page of the repository.
+
+2.  Above the list of files, click Code.
+
+3.  Click Use GitHub CLI, then the copy icon.
+
+4.  Open Git Bash and change the current working directory to the location where you want the cloned directory.
+
+5.  Type git clone, and then paste the URL that was copied from step 3 above - i.e., `git clone https://github.com/antonia-white/deilen.git`
+
+6. Press Enter to create the local clone.
+
+### Forking
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+To fork this project go to the top left of the repository, where you see the Fork Icon and click Fork.  This will create a copy of the repository for you.
+
+
+## Credits 
+
+### Content 
+
+- All text throughout the website is self-written.
+- 
+
+### Media
+- 
+
+### Acknowledgements
+
+- My Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN)
+- My friends and family for manually testing the site.
+
+***
