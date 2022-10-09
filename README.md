@@ -1,4 +1,4 @@
-# Game Base
+# Deilen
 
 This website is a full stack ecommerce store to allow people to buy house plants and plant related homeware from the mockup plant company Deilen (the Welsh word for 'leaf').
 
@@ -106,7 +106,7 @@ __Feature__
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
 - [GitPod](https://gitpod.io) was used as a cloud based iDE
 - [GitHub](https://github.com/) was used to manage the Git repository
-- [Heroku](https://gamebase-storage.herokuapp.com/) was used for deployment
+- [Heroku](link to deployed site) was used for deployment
 - [Git](https://git-scm.com/) was used for version control
 - [Python](https://www.python.org/downloads/) used as ...
 - [Django](https://www.djangoproject.com/) used as ...
@@ -127,7 +127,7 @@ To view all testing documentation, refer to [TESTING.md](TESTING.md).
 
 ## Deployment
 
-The site was deployed to Heroku. The live link can be found [here](https://gamebase-storage.herokuapp.com/)
+The site was deployed to Heroku. The live link can be found [here](link to deployed site)
 
 The steps to deploy a Heroku app are as follows: 
 1.  Log in to Heroku or create an account if required.
@@ -156,7 +156,7 @@ Final steps:
 2. Create an untracked file called env.py in your repo and input the config vars you previously established in Heroku.
 3. Create a requirements.txt file
     - If you want to freeze your own packages into this file, run `pip3 freeze --local > requirements.txt` in the console.
-    - To install only the packages that are already listed in the GameBase repo requirements (if making a local copy/clone) run `pip3 install -r requirements.txt` in the console.
+    - To install only the packages that are already listed in the Deilen repo requirements (if making a local copy/clone) run `pip3 install -r requirements.txt` in the console.
 
 ### Cloning
 

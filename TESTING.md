@@ -30,7 +30,7 @@
 
 ### Fixed Bugs
 
-I used the built-in [GitHub Issues](https://github.com/antonia-white/game-base/issues) tracker for tracking any active bugs during development. 
+I used the built-in [GitHub Issues](https://github.com/antonia-white/deilen/issues) tracker for tracking any active bugs during development. 
 ![Github Issues](documentation/testing/github-issues-screenshot.png)
 
 Here are the issues tracked that have been closed and working as intended:
