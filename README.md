@@ -115,7 +115,8 @@ __Feature__
 - [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
 - [Am I Responsive](http://ami.responsivedesign.is/) was used to generate a mock-up image
 - [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness
-- [Lucidspark](https://lucidspark.com/) was used for creating wireframes and schema diagrams
+- [Wireframe.cc](https://wireframe.cc/pro/) was used for creating wireframes
+- [DrawSQL](https://drawsql.app/) was used for creating the database schema
 
 ***
 
