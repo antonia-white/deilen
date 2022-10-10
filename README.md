@@ -43,19 +43,19 @@ As a user of the Deilen website, I want to:
 
 - Home wireframe
 
- ![Home wireframe](documentation/wireframes/deilen-home-wireframe.png)
+ ![Home wireframe](documentation/wireframes/deilen-homepage-wireframe.png)
 
 
 
  - Products wireframe
 
- ![Products wireframe](documentation/wireframes/deilen-products-wireframe.png)
+ ![Products wireframe](documentation/wireframes/deilen-all-products-wireframe.png)
 
 
 
- - Mobile shopping bag wireframe
+ - Shopping bag wireframe
 
- ![Mobile shopping bag wireframe](documentation/wireframes/deilen-shopping-bag-mobile-wireframe.png)
+ ![Shopping bag wireframe](documentation/wireframes/deilen-shopping-cart-wireframe.png)
 
  
 
