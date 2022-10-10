@@ -64,7 +64,7 @@ As a user of the Deilen website, I want to:
 ## Database Model
 - Database schema for Deilen
 
- ![database schema](documentation/wireframes/deilen_schema.png)
+ ![database schema](documentation/wireframes/deilen-schema.png)
 
 ***
 
