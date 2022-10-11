@@ -108,15 +108,12 @@ __Feature__
 ***
 
 ## Technologies
-- [HTML](https://en.wikipedia.org/wiki/HTML) was used as the markup language
-- [CSS](https://en.wikipedia.org/wiki/CSS) was used for custom styling
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
+
 - [GitPod](https://gitpod.io) was used as a cloud based iDE
 - [GitHub](https://github.com/) was used to manage the Git repository
 - [Heroku](link to deployed site) was used for deployment
 - [Git](https://git-scm.com/) was used for version control
-- [Python](https://www.python.org/downloads/) used as ...
-- [Django](https://www.djangoproject.com/) used as ...
+- [Django](https://www.djangoproject.com/) used as the project's web framework
 - [Pip3](https://pip.pypa.io/en/stable/) was the package manager used to install the dependencies
 - [Bootstrap](https://getbootstrap.com/) was used for website layout and responsive components
 - [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
@@ -124,6 +121,13 @@ __Feature__
 - [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness
 - [Wireframe.cc](https://wireframe.cc/pro/) was used for creating wireframes
 - [DrawSQL](https://drawsql.app/) was used for creating the database schema
+- [W3C HTML Validator](https://validator.w3.org/#validate_by_input+with_options) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) were used to check HTML and CSS files for errors
+
+### Languages
+- [HTML](https://en.wikipedia.org/wiki/HTML) was used as the markup language
+- [CSS](https://en.wikipedia.org/wiki/CSS) was used for custom styling
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
+- [Python](https://www.python.org/downloads/) was used as ...
 
 ***
 
