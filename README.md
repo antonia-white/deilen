@@ -8,25 +8,32 @@ To visit the website, please visit the deployed site [here](insert link to deplo
 
 ***
 
+## Target Audience
+  - Homeowners looking to buy decorative house plants.
+  - Interior designers looking to buy plants for indoor spaces e.g., an office space.
+  - People looking to gift a house plant to a loved one.
+
 ## User Stories
 
 As a user of the Deilen website, I want to:
-  1. ?
-  2. ?
-  3. ?
-  4. ?
-  5. ?
-  6. ?
-  7. ?
-  8. ?
+  1. User Authentication / Accounts
+     - Site users should be able to register an account that allows a user to sign in and out of the site.
+     - A user should be able to create a profile to store personal information to make checkout easier with default personal information to automatically populate form fields at checkout.
+     - Users should be able to ammend profile information to keep records up-to-date and also have the ability to delete their account.
+     - A user should be able to reset their password via email authentication so the account is not lost if the password is forgotten.
+  2. Site Navigation
+     - hello
+  3. Shopping
+  4. User Checkout
+  5. Site Admin
 
 ***
 
 ## UX
 
 ### Colour Scheme
-- A earthy and natural blend of greens, browns and greys. This gives the website a fresh, organic and natural look.
-    >![colour palette](documentation/testing/color-palette.png)
+- A earthy and natural blend of pastel pink yellow and green with darker shadesof clay-brown and blue-grey. This gives the website a fresh, organic and natural look.
+    >![colour palette](documentation/testing/deilen-colours.png)
 - No accessibility issues were returned when passing the colour scheme through the official [WebAIM](https://webaim.org/resources/contrastchecker/).
     >![webaim screenshot](documentation/testing/webaim-screenshot.png)
 
