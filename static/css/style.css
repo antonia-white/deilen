@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fcffff;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+#site-navbar {
+    background-color: #abc798;
+}
+
+#logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+p {
+    color: red;
+}
+
