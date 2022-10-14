@@ -2,45 +2,49 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Description -->
-        <meta name="description" content="Let nature into your home or office space with Deilen, 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Description -->
+    <meta name="description" content="Let nature into your home or office space with Deilen, 
         the best provider for indoor plants. From succulents to spider plants, cacti to creeping 
         fig - Deilen can provide the herbage for all your botanical interiror design needs.">
-        <!-- Keywords -->
-        <meta name="keywords" content="house plants, houseplant, plants, plant shop, indoor plants, 
+    <!-- Keywords -->
+    <meta name="keywords" content="house plants, houseplant, plants, plant shop, indoor plants, 
         office plants, tropical plants, succulents, hanging plants, indoor garden, cactus, orchid, 
         air purifying plants, vines">
-        <!-- TODO: fix favicon -->
-        <!-- Favicon. -->
-          <!-- <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}"> -->
-          <!-- <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}"> -->
-          <!-- <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}"> -->
-          <!-- <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}"> -->
+    <!-- TODO: fix favicon -->
+    <!-- Favicon. -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}"> -->
+    <!-- <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}"> -->
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
-	<link rel="icon" href="{% static '/favicon/favicon.ico' %}">
+    <link rel="icon" href="{% static '/favicon/favicon.ico' %}">
 
     {% block corecss %}
     <!-- TODO: fix favicon -->
-        <!-- Favicon -->
-          <!-- <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/> -->
-        <!-- Bootstrap 5 CSS -->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
-        <!-- Custom CSS -->
-            <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <!-- Google Fonts -->
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/> -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corben&display=swap" rel="stylesheet">
 
     {% endblock %}
-    
+
     {% block extra_css %}
     {% endblock %}
 
@@ -49,9 +53,12 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <!-- Bootstrap 5 Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f82ec574c3.js" crossorigin="anonymous"></script>
     <!-- Stripe -->
     {% endblock %}
 
@@ -59,22 +66,84 @@
     {% endblock %}
 
     <title>Deilen {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-      <header class="container-fluid fixed-top">
-			<!-- Navbar -->
-			<div id="site-navbar" class="row pt-lg-2 d-none d-lg-flex">
-				<!-- Logo -->
-				<div id="logo" class="col-12 col-lg-4 my-auto oy-1 py-lg-0 text-center text-lg-left">
-					<a href="{% url 'home' %}" class="nav-link main-logo-link">
-						<h2 class="logo-font my-0"><strong>Deilen</strong></h2>
-					</a>
-				</div>
-			</div>
-      </header>
+</head>
+
+<body>
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0">D e i l e n</h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-secondary rounded-0" type="text" name="q"
+                            placeholder="Search for a plant...">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-dark border border-secondary rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="material-symbols-outlined">search</i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="material-symbols-outlined">account_circle</i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Manage Inventory</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="" class="dropdown-item">Register</a>
+                            <a href="" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="">
+                            <div class="text-center">
+                                <div><i class="material-symbols-outlined">garden_cart</i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container"></div>
     {% endif %}
 
     {% block page_header %}
@@ -83,9 +152,65 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row footer-background">
+            <!-- Where we're based -->
+            <div class="col-xs-4 col-sm-4 col-md-3">
+                <p class="mt-3"><strong>Where we're based:</strong></p>
+                <!-- TODO: create a contact us form -->
+            </div>
+            <!-- Information -->
+            <div class="col-xs-4 col-sm-4 col-md-3">
+                <p class="mt-3"><strong>Information</strong></p>
+                <ul class="mt-3 footer-list">
+                    <li><a href="#" class="footer-text">
+                            <p class="mb-0" id="returns">Returns & Refunds</p>
+                        </a></li>
+                    <li><a class="footer-text" href="#">
+                            <p id="shipping" class="mb-0">Shipping</p>
+                        </a></li>
+                    <li><a class="footer-text" href="#">
+                            <p id="faqs" class="mb-0">FAQ's</p>
+                        </a></li>
+                    <li><a href="#" class="footer-text">
+                            <p id="terms" class="mb-0">Terms and Conditions</p>
+                        </a></li>
+                        <!-- TODO: generate privacy policy -->
+                    <li><a class="footer-text"
+                            href="https://www.privacypolicygenerator.info/"
+                            target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-xs-4 col-sm-4 col-md-3">
+                <p class="mt-3"><strong>Quick Links</strong></p>
+                <ul class="mt-3 footer-list">
+                    <li><a class="footer-text" href="">Shop</a></li>
+                    <li><a class="footer-text" href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Social Links -->
+            <div class="col-xs-4 col-sm-12 col-md-3 icons">
+                <p class="mt-3 small-screen-hide"><strong>Follow Us</strong></p>
+                <ul class="mt-3">
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our facebook page"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our twitter page"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our instagram page"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our youtube page"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     {% block postloadjs %}
     {% endblock %}
 
-    
-  </body>
+
+</body>
+
 </html>
