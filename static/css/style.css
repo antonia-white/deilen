@@ -1,23 +1,10 @@
-html {
-    height: 100%;
-}
-
-body {
-    background-color: #fcffff;
-    background-size: cover;
-    height: calc(100vh - 164px);
-}
-
-#site-navbar {
-    background-color: #abc798;
-}
-
-#logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
+/* Google icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 /* from Bulma */
@@ -29,7 +16,80 @@ body {
     width: 1.5rem;
 }
 
-p {
-    color: red;
+html {
+    height: 100%;
 }
 
+body {
+    background-color: #fcffff;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+/* Header */
+
+header {
+    background-color: #abc798;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'Corben', cursive;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Footer */
+
+.footer-background {
+    background-color: #abc798;
+}
+
+.footer-text{
+    color: black;
+}
+
+.footer-list a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    font-size: 17px;
+    color: #63372c;
+}
+
+.footer-list li {
+    list-style: none;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.icons ul {
+    padding: 0;
+}
+
+.icons li {
+    display: inline;
+    padding: 10px;
+}
+
+.icons li i {
+    color: black;
+    font-size: 20px;
+}
+
+.icons li i:hover {
+    color: #465c69;
+}
+
+/* Media Queries */
+@media(max-width:770px) {
+    .small-screen-hide {
+        display: none;
+    }
+}
