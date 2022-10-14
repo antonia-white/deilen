@@ -2,17 +2,38 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <p>Example</p>
+<div class="container-fluid bg-light">
+    <div class="row main-container">
+        <div class="col-8">
+            <img class="img-fluid" src="{% static 'media/houseplants.jpg' %}" alt="Assortment of houseplants">
+        </div>
+        <div class="col-4 flex-container">
+            <div id="offers-block" class="text-center">
+                <h2>Halloween Offer:</h2>
+                <p>Free delivery on orders over £666!</p>
+                <p class="text-muted"><small>*Offer avaliable until 05/11/22.</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 text-center">
+            <a href="">
+                <p class="btn btn-dark btn-lg pt-2">Register</p>
+            </a>
+        </div>
+        <div class="col-6 text-center">
+            <a href="">
+                <p class="btn btn-dark btn-lg pt-2">Shop now</p>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}

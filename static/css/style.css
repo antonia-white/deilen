@@ -22,7 +22,6 @@ html {
 
 body {
     background-color: #fcffff;
-    background-size: cover;
     height: calc(100vh - 164px);
 }
 
@@ -30,6 +29,8 @@ body {
 
 header {
     background-color: #abc798;
+    display: block;
+    
 }
 
 .logo-font {
@@ -85,6 +86,16 @@ header {
 
 .icons li i:hover {
     color: #465c69;
+}
+
+/* Home page */
+.main-container {
+    position: relative;
+    justify-content: center;
+}
+
+#offers-block {
+    padding-top:50%;
 }
 
 /* Media Queries */
