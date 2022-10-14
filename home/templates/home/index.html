@@ -16,6 +16,7 @@
             <img class="img-fluid" src="{% static 'media/houseplants.jpg' %}" alt="Assortment of houseplants">
         </div>
         <div class="col-4 flex-container">
+            <!-- TODO: change 666 to become a variable { {free_delivery_threshold}} -->
             <div id="offers-block" class="text-center">
                 <h2>Halloween Offer:</h2>
                 <p>Free delivery on orders over £666!</p>
@@ -30,7 +31,7 @@
             </a>
         </div>
         <div class="col-6 text-center">
-            <a href="">
+            <a href="{% url 'plants' %}">
                 <p class="btn btn-dark btn-lg pt-2">Shop now</p>
             </a>
         </div>
