@@ -1,0 +1,62 @@
+[
+    {
+      "pk": 1,
+      "model": "plants.plant",
+      "fields": {
+        "name": "Silver Prayer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
+        "price": 35.99,
+        "plant_type": 3,
+        "plant_difficulty": 2,
+        "image": "plant (1).jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "plants.plant",
+      "fields": {
+        "name": "Weeping Fern",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "price": 49.99,
+        "plant_type": 2,
+        "plant_difficulty": 3,
+        "image": "plant (2).jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "plants.plant",
+      "fields": {
+        "name": "Indian Palm",
+        "description": "The Indian Palm brings simple elegance to any room and it’s really easy to care for. It will tolerate low light and infrequent watering, but as with any plant, you’ll get better results if you treat them well. It will also appreciate a feed with liquid fertiliser once per month in spring and summer.",
+        "price": 69.99,
+        "plant_type": 1,
+        "plant_difficulty": 1,
+        "image": "plant (3).jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "plants.plant",
+      "fields": {
+        "name": "Golden Pothos",
+        "description": "The golden pothos os a versatile plant that can grow free-standing or can be trained to climb walls. A favourite among houseplant lovers.",
+        "price": 159.99,
+        "plant_type": 2,
+        "plant_difficulty": 2,
+        "image": "plant (4).jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "plants.plant",
+      "fields": {
+        "name": "Bamboo",
+        "description": "This is a superweapon in the arsenal of the plantscaper, as it is one of the only indoor plants that actually thrives in shaded spots.",
+        "price": 9.99,
+        "plant_type": 1,
+        "plant_difficulty": 1,
+        "image": "plant (5).jpg"
+      }
+    }
+]

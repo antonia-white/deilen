@@ -1,0 +1,37 @@
+[
+    {
+      "pk": 1,
+      "model": "plants.plant_type",
+      "fields": {
+        "name": "succulent"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "plants.plant_type",
+      "fields": {
+        "name": "hanging"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "plants.plant_type",
+      "fields": {
+        "name": "flowering"
+      }
+    },
+    {
+        "pk": 4,
+        "model": "plants.plant_type",
+        "fields": {
+          "name": "air purifier"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "plants.plant_type",
+        "fields": {
+          "name": "large"
+        }
+      }
+]

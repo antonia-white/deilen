@@ -1,0 +1,23 @@
+[
+    {
+      "pk": 1,
+      "model": "plants.plant_difficulty",
+      "fields": {
+        "name": "easy"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "plants.plant_difficulty",
+      "fields": {
+        "name": "medium"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "plants.plant_difficulty",
+      "fields": {
+        "name": "hard"
+      }
+    }
+]
