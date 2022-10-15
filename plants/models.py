@@ -13,6 +13,9 @@ class PlantType(models.Model):
 class PlantDifficulty(models.Model):
     """Plant care difficulties"""
 
+    class Meta:
+        verbose_name_plural = 'Plant difficulties'
+
     name = models.CharField(max_length=254)
 
     def __str__(self):

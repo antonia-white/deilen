@@ -1,35 +1,35 @@
 [
     {
       "pk": 1,
-      "model": "plants.plant_type",
+      "model": "plants.PlantType",
       "fields": {
         "name": "succulent"
       }
     },
     {
       "pk": 2,
-      "model": "plants.plant_type",
+      "model": "plants.PlantType",
       "fields": {
         "name": "hanging"
       }
     },
     {
       "pk": 3,
-      "model": "plants.plant_type",
+      "model": "plants.PlantType",
       "fields": {
         "name": "flowering"
       }
     },
     {
         "pk": 4,
-        "model": "plants.plant_type",
+        "model": "plants.PlantType",
         "fields": {
-          "name": "air purifier"
+          "name": "air_purifier"
         }
       },
       {
         "pk": 5,
-        "model": "plants.plant_type",
+        "model": "plants.PlantType",
         "fields": {
           "name": "large"
         }
