@@ -8,7 +8,7 @@
         "price": 35.99,
         "plant_type": 3,
         "plant_difficulty": 2,
-        "image": "plant (1).jpg"
+        "image": "plant1.jpg"
       }
     },
     {
@@ -20,7 +20,7 @@
         "price": 49.99,
         "plant_type": 2,
         "plant_difficulty": 3,
-        "image": "plant (2).jpg"
+        "image": "plant2.jpg"
       }
     },
     {
@@ -32,7 +32,7 @@
         "price": 69.99,
         "plant_type": 1,
         "plant_difficulty": 1,
-        "image": "plant (3).jpg"
+        "image": "plant3.jpg"
       }
     },
     {
@@ -44,7 +44,7 @@
         "price": 159.99,
         "plant_type": 2,
         "plant_difficulty": 2,
-        "image": "plant (4).jpg"
+        "image": "plant4.jpg"
       }
     },
     {
@@ -56,7 +56,7 @@
         "price": 9.99,
         "plant_type": 1,
         "plant_difficulty": 1,
-        "image": "plant (5).jpg"
+        "image": "plant5.jpg"
       }
     }
 ]
