@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+
+    <div class="container header-container">
+
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+
+                <!--plant Image-->
+
+                <div class="image-container my-5">
+
+                    {% if plant.image %}
+
+                        <a href="{{ plant.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ plant.image.url }}" alt="{{ plant.name }}">
+                        </a>
+
+                        {% else %}
+
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ plant.name }}">
+                        </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <!--plant Details-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="plant-details-container mb-5 mt-md-5">
+                    
+                    <p class="mb-0">{{ plant.name }}</p>
+
+                    {% if plant.plant_type %}
+                    <p class="small mt-1 mb-0">
+                        <a href="{% url 'plants' %}?plant_type={{ plant.plant_type.name }}" class="text-muted">
+                        <i class="fas fa-tags mr-1"></i>{{ plant.plant_type.name }}</a>
+                    </p>
+                    {% endif %} 
+                    
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ plant.price }}</p>
+                    
+                    <p class="mt-3">{{ plant.description }}</p>
+
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group input-group-{{ plant.id }}">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-dark rounded-0 decrement-qty_{{ plant.id }}" 
+                                                data-item_id="{{ plant.id }}" >
+                                                <span class="icon">
+                                                    <i class="fas fa-angle-double-down"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty_input id_qty_{{ plant.id }}" type="number"
+                                            name="quantity" value="1" min="1" max="99"
+                                            data-item_id="{{ plant.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-dark rounded-0 increment-qty_{{ plant.id }}"
+                                                data-item_id="{{ plant.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-angle-double-up"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="{% url 'plants' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-backward"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-dark rounded-0 text-uppercase mt-5" value="Add to Wheelbarrow">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+  
+                </div>
+
+            </div>
+            
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
