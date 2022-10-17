@@ -53,7 +53,21 @@
                     {% if plant.plant_type %}
                     <p class="small mt-1 mb-0">
                         <a href="{% url 'plants' %}?plant_type={{ plant.plant_type.name }}" class="text-muted">
-                        <i class="fas fa-tags mr-1"></i>{{ plant.plant_type.name }}</a>
+                            {% if plant.plant_type.name == "succulent" %}
+                                <i class="material-symbols-outlined">sunny</i>
+                            {% elif plant.plant_type.name == "hanging" %}
+                                <i class="material-symbols-outlined">checkroom</i>
+                            {% elif plant.plant_type.name == "flowering" %}
+                                <i class="material-symbols-outlined">local_florist</i>
+                            {% elif plant.plant_type.name == "large" %}
+                                <i class="material-symbols-outlined">nature</i>
+                            {% elif plant.plant_type.name == "air purifier" %}
+                                <i class="material-symbols-outlined">air</i>
+                            {% else %}
+                                <i class="material-symbols-outlined">potted_plant</i>
+                            {% endif %}
+                            {{ plant.plant_type.name }}
+                        </a>
                     </p>
                     {% endif %} 
                     
