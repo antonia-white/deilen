@@ -75,7 +75,7 @@
                     
                     <p class="mt-3">{{ plant.description }}</p>
 
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form" action="{% url 'add_to_bag' plant.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
