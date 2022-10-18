@@ -4,7 +4,7 @@
 
 {% block page_header %}
     <div class="container header-container">
-        <div class="row" style="height: 50px;">
+        <div class="row" style="height: 70px;">
             <div class="col"></div>
         </div>
     </div>
@@ -28,21 +28,21 @@
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
-                                <!-- bag total -->
+                                {% include "bag/bag-total.html" %}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <!-- checkout buttons -->
+                                {% include "bag/checkout-buttons.html" %}
                             </div>
                         </div>
                         {% for item in bag_items %}
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-2">
-                                    <!-- Plant image -->
+                                    {% include "bag/plant-image.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 mb-2">
-                                    <!-- Plant info -->
+                                    {% include "bag/plant-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
                                     <p class="my-0">Price Each: ${{ item.plant.price }}</p>
@@ -67,10 +67,10 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <!-- plant image -->
+                                        {% include "bag/plant-image.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <!-- plant info -->
+                                        {% include "bag/plant-info.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.plant.price }}</p>
@@ -82,12 +82,12 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-end">
-                                    <!-- bag total -->
+                                    {% include "bag/bag-total.html" %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-end">
-                                    <!-- checkout buttons -->
+                                    {% include "bag/checkout-buttons.html" %}
                                 </td>
                             </tr>
                         </table>
