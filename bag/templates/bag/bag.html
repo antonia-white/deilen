@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row" style="height: 50px;">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Your Wheelbarrow</h2>
+                <p class="text-muted mb-5">Here are the contents of your wheelbarrow:</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="d-block d-md-none">
+                        <div class="row">
+                            <div class="col">
+                                <!-- bag total -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <!-- checkout buttons -->
+                            </div>
+                        </div>
+                        {% for item in bag_items %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-2">
+                                    <!-- Plant image -->
+                                </div>
+                                <div class="col-12 col-sm-6 mb-2">
+                                    <!-- Plant info -->
+                                </div>
+                                <div class="col-12 col-sm-6 order-sm-last">
+                                    <p class="my-0">Price Each: ${{ item.plant.price }}</p>
+                                    <p><strong>Subtotal: </strong>${{ item.plant.price | calc_subtotal:item.quantity }}</p>
+                                </div>
+                            </div>
+                            <div class="row"><div class="col"><hr></div></div>
+                        {% endfor %}
+                    </div>
+                    <div class="table-responsive rounded d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Plant Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <!-- plant image -->
+                                    </td>
+                                    <td class="py-3">
+                                        <!-- plant info -->
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plant.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plant.price | calc_subtotal:item.quantity }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-end">
+                                    <!-- bag total -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-end">
+                                    <!-- checkout buttons -->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your wheelbarrow is empty.</p>
+                    <a href="{% url 'plants' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
