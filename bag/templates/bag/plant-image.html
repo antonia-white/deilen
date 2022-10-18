@@ -1,0 +1,5 @@
+{% if item.plant.image %}
+<img class="img-fluid rounded" src="{{ item.plant.image.url }}" alt="{{ item.plant.name }}">
+{% else %}
+<!-- TODO: add alterante image here -->
+{% endif %}
