@@ -42,6 +42,10 @@ header {
     width: fit-content;
 }
 
+.push-content {
+    height: 70px;
+}
+
 /* Footer */
 
 .footer-background {
