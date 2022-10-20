@@ -10,7 +10,7 @@
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
+            <input class="text-center form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                 data-item_id="{{ item.item_id}}">
             <div class="input-group-append">
@@ -25,4 +25,4 @@
     </div>
 </form>
 <a class="update-link text-info"><small>Update</small></a>
-<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+<a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
