@@ -6,8 +6,6 @@ from django.db.models.functions import Lower
 
 from .models import Plant, PlantDifficulty, PlantType
 
-# Create your views here.
-
 
 def all_plants(request):
     """ A view to show all plants, including sorting and search queries """
