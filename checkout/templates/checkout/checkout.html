@@ -23,5 +23,59 @@
             <hr>
         </div>
     </div>
+
+    <div class="row">
+
+        <!--Order Summary-->
+
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p>Order Summary of <strong>{{ product_count }}</strong> items</p>
+            <div class="row">
+                <div class="col-7 offset-2">
+                    <p class="mb-1 mt-0 small">Item</p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="mb-1 mt-0 small">Subtotal</p>
+                </div>
+                <hr>
+            </div>
+            {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-2 mb-1">
+                        <a href="{% url 'plant_detail' item.plant.id %}">
+                            {% if item.plant.image %}
+                                <img src="{{ item.plant.image.url }}" alt="{{ plant.name }}" class="w-100">
+                            {% else %}
+                            <!-- TODO: add alternative image -->
+                                <img src="" alt="{{ plant.name }}" class="w-100">
+                            {% endif %}    
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p class="my-0"><strong>{{ item.plant.name }}</strong></p>
+                        <p class="my-0 small">Quantity: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="my-0 small">£{{ item.plant.price | calc_subtotal:item.quantity }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            <hr class="my-0">
+            <div class="row text-black text-right">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <br>
+                    <p class="my-0">Grand Total:</p>
+                </div>
+                <div class="col-3">
+                    <p class="my-0">${{ total | floatformat:2 }}</p>
+                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                    <br>
+                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
