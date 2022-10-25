@@ -103,8 +103,24 @@ header {
 }
 
 /* Media Queries */
-@media(max-width:770px) {
+
+/* Small screens bootstrap 5 */
+@media(max-width:767px) {
     .small-screen-hide {
+        display: none;
+    }
+}
+
+/* Medium screens bootstrap 5 */
+@media(max-width:991px) {
+    .medium-screen-hide {
+        display: none;
+    }
+}
+
+/* Large screens bootstrap 5 */
+@media(min-width:992px) {
+    .large-screen-hide {
         display: none;
     }
 }
