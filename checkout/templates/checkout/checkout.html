@@ -3,7 +3,7 @@
 {% load bag_tools %}
 
 {% block extra_css %}
-    <link rel="stlyesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -29,10 +29,11 @@
 
         <!--Order Summary-->
         <div class="col-lg-2">
-            test
+            <p class="medium-screen-hide">Order Summary of <strong>{{ product_count }}</strong> items:</p>
         </div>
         <div class="col-12 col-lg-8 mb-5">
-            <p>Order Summary of <strong>{{ product_count }}</strong> items</p>
+            <p class="large-screen-hide">Order Summary of <strong>{{ product_count }}</strong> items:</p>
+            <br class="medium-screen-hide">
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small">Item</p>
@@ -83,10 +84,12 @@
     </div>
 
     <!-- Form -->
+    <div class="row">
+        <p class="text-muted">Please fill out the form below to complete your order</p>
+    </div>
     <div class="d-flex flex-row">
         <div class="col-lg-3"></div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <!-- Details -->
