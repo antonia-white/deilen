@@ -79,13 +79,49 @@ As a user of the Deilen website, I want to:
 
 ### Existing Features 
 
-__Feature__
-
+__Navigation Bar__
+  - Allows the user to navigate around the Deilen site. The Deilen logo will direct the user to the homepage, there are also Profile buttons and a button to take a user to their Shopping Cart or "wheelbarrow". The wheelbarrows icon signal if there are items currently sitting in the bag.
+  - The search bar allows users to search for a keyterm throughout the site, this is useful if the user has a particular product in mind to purchase.
+  - Buttons will be available to the user depending on whether they are logged into their account or not.
+  - The mobile navbar condenses all the same elements into a burger menu, this retains screensaver for other elements e.g., products.
+  ![Nav Bar](documentation/testing/navbar.png)
+  ![Mobile Nav Bar](documentation/testing/mobile-navbar.png)
+  
+  __Footer__
+  - The footer contains the address of the company, useful links, business information and links to social media accounts. All of which either open modals or open new tabs directed away from the website.
+  - The footer design matches that of the header to give a cohesive feel to the website.
+  ![Footer](documentation/testing/footer.png)
+  
+  __Homepage__
+  - The homepage consists of a eye-catching photo to instantly suggest the purpose of the website to the user.
+  - There is a section dedicated to advertising company special offers, currently on display is the Halloween offer where free delivery is granted to orders over £666.
+  - On the homepage there are also buttons to direct the user to the main shop i.e., to view the plant products and .....
+  ![Homepage](documentation/testing/homepage.png)
+  
+  __Shop Floor__
+  - The shop floor displays the plants that the user is able to buy through the website.
+  - Each plant has its own card, the user can see to which category the plant belongs e.g., if the plant is an air purifier or a succulent. The user can also see at a glance the care difficulty of the plant - this informs clients of the attention and care a plant needs and can therefore decide if a plant is suitable for its intended purpose.
+  - Each plant product displays a price per item as well as a field to select a quantity of the product (max quantity selection is 99 items of a single product).
+  ![Shop Floor](documentation/testing/shop-floor.png)
+  
+  __Product Filtering__
   - Describe the feature and what it allows a user to do.
   - Does the feature have any defensive programming?
-
-  ![Picture of feature](documentation/testing/example.png)
-
+  ![Product filtering](documentation/testing/product-filtering.png)
+  
+  __Shopping Bag ("Wheelbarrow")__
+  - The wheelbarrow is always accessible to users, even when empty. The wheelbarrow allows users to view what is currently in their bag for purchase. From here, a user can amend their order, continue shopping or proceed to checkout.
+  ![Wheelbarrow](documentation/testing/wheelbarrow.png)
+  
+  __Checkout__
+  - Once item(s) have been added to the wheelbarrow the user will then be able to checkout. Upon checkout there is a brief review of the users basket i.e., what they intend to purchase. The user will then be required to fill out their delivery information and then proceed to fill out their payment information. Once payment is completed the order is made.
+  - Does the feature have any defensive programming?
+  ![Checkout](documentation/testing/checkout.png)
+  
+__Feature__
+  - Describe the feature and what it allows a user to do.
+  - Does the feature have any defensive programming?
+  ![Picture of feature](documentation/testing/example.png) 
 
 ### Admin Features
 
