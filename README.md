@@ -117,7 +117,7 @@ __Navigation Bar__
   - Once item(s) have been added to the wheelbarrow the user will then be able to checkout. Upon checkout there is a brief review of the users basket i.e., what they intend to purchase. The user will then be required to fill out their delivery information and then proceed to fill out their payment information. Once payment is completed the order is made.
   - Does the feature have any defensive programming?
   ![Checkout](documentation/testing/checkout.png)
-  
+
 __Feature__
   - Describe the feature and what it allows a user to do.
   - Does the feature have any defensive programming?
@@ -236,7 +236,11 @@ To fork this project go to the top left of the repository, where you see the For
 - 
 
 ### Media
-- 
+
+- Icons were taken from both [Google Font Icons](https://fonts.google.com/icons) and [FontAwesome](https://fontawesome.com/).
+- The favicon was generated with [favicon.io](https://favicon.io/) using Twitter emojis.
+- The homepage picture was taken from the open source site [Unsplash](https://unsplash.com/).
+- The product images were taken from [Kaggle](https://www.kaggle.com/), a website for dataset downloads. Specifically, images were taken from the [Healthy and Wilted Houseplant Images](https://www.kaggle.com/datasets/russellchan/healthy-and-wilted-houseplant-images) dataset. Only healthy houseplant images were used as product images.
 
 ### Acknowledgements
 
