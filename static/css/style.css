@@ -64,6 +64,7 @@ header {
 .footer-list a:hover {
     font-size: 17px;
     color: #63372c;
+    cursor: pointer;
 }
 
 .footer-list li {
