@@ -164,13 +164,13 @@
             </div>
             <!-- Information -->
             <div class="col-xs-4 col-sm-4 col-md-3">
-                <p class="mt-3"><strong>Information</strong></p>
+                <p class="mt-3"><strong>Service</strong></p>
                 <ul class="mt-3 footer-list">
                     <li><a class="footer-text" data-bs-toggle="modal" data-bs-target="#retRefModal">
                             <p class="mb-0" id="returns">Returns & Refunds</p>
                         </a></li>
                     <li><a class="footer-text" data-bs-toggle="modal" data-bs-target="#shippingModal">
-                            <p id="shipping" class="mb-0">Shipping</p>
+                            <p id="shipping" class="mb-0">Delivery and Shipping</p>
                         </a></li>
                     <li><a class="footer-text" data-bs-toggle="modal" data-bs-target="#faqModal">
                             <p id="faqs" class="mb-0">FAQs</p>
@@ -264,7 +264,7 @@
                         </ul>
                         <h5>Questions</h5>
                         <p>If you have any questions concerning our returns policy, please contact us at <a
-                            href="mailto:deilen.example@gmail.com">deilen.example@gmail.com</a>.</p>
+                                href="mailto:deilen.example@gmail.com">deilen.example@gmail.com</a>.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -273,16 +273,58 @@
             </div>
         </div>
     </div>
-    <!-- Shipping -->
+    <!-- Delivery -->
     <div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="shippingModalLabel">Shipping</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="shippingModalLabel">Delivery and Shipping</h1>
+                    <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#shippingModal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div data-custom-class="body">
+                        <p class="text-muted">Last updated: October 28, 2022</p>
+
+                        <p>This Shipping & Delivery Policy is part of our Terms and Conditions ("Terms") and should
+                            therefore be read alongside our main
+                            <!-- TODO: fix modal overlay, open TC modal from shipping & deliveries and try to close TC modal after. -->
+                            <!-- TODO: add pointer cursor to open tc modal from shipping & deliveries -->
+                            <a class="footer-text" data-bs-dismiss="modal" data-bs-toggle="modal"
+                                data-bs-target="#tcModal">Terms and Conditions</a>.
+                        </p>
+                        <p>Please carefully review our Shipping & Delivery Policy when purchasing our products. This
+                            policy will apply to any order you plave with us.</p>
+                        <hr>
+                        <h4><u>What are my shipping and delivery options?</u></h4>
+                        <p>We offer delivery options to those in the UK. In some cases a third-party supplier may be
+                            managing our inventory and will be responsible for delivering your products.</p>
+                        <h5>Free Delivery</h5>
+                        <p>We currently offer free standard delivery on orders over £666 due to our Halloween Offer*.
+                        </p>
+                        <h5>Expedited Delivery Fees</h5>
+                        <p>We also offer delivery at a rate of 10% of the grand total of your order.</p>
+                        <p>All times and dates given for delivery of the products are given in good faith but are
+                            estimates only.</p>
+                        <h5>Do you deliver Internationally?</h5>
+                        <p>We do not offer any international shipping.</p>
+                        <h5>Are there any other shipping restrictions?</h5>
+                        <p>If you require your purchase to be delivered to a PO Box, first you must contact customer
+                            service to determine if the delivery address is acceptable to recieve the products. If these
+                            precautions are not taken and as a result delivery fails, Deilen will not be responsible or
+                            liable to give a refund.</p>
+                        <p>If you have questions about returns, please review our
+                            <!-- TODO: fix modal overlay, open TC modal from shipping & deliveries and try to close TC modal after. -->
+                            <!-- TODO: add pointer cursor to open tc modal from shipping & deliveries -->
+                            <a class="footer-text" data-bs-dismiss="modal" data-bs-toggle="modal"
+                                data-bs-target="#retRefModal">Returns and Refunds Policy</a>.
+                        </p>
+                        <h5>Questions</h5>
+                        <p>If you have any questions concerning our shipping and delivery policy, please contact us at
+                            <a href="mailto:deilen.example@gmail.com">deilen.example@gmail.com</a>.
+                        </p>
+                        <p><small>* Offer avaliable until 05/11/22.</small></p>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
@@ -299,7 +341,112 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <p class="text-muted">Last updated: October 28, 2022</p>
+                    <hr>
+                    <!-- TODO: Fix accordion items collapsing -->
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Where are my plants from?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    All plants are grown and dispatched from our fufilment center in Crickhowell, Wales.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Can I cancel my order?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We are unable to cancel your order once this has been placed and accepted by our
+                                    fulfilment centre in Wales.</p>
+                                    <p>Please note, perishable items such as plants are exempt from the right to cancel and
+                                    we are unable to process refunds where you have ordered the wrong product or changed
+                                    your mind.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I amend my order?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Once orders have been accepted by the fulfilment centre we are unable to make any
+                                    amendments.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Can I change my shipping address provided?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We are unable to change the shipping address once this has been accepted by our
+                                        fulfilment centre. Please ensure all details are correct before placing your
+                                        order.</p>
+                                    <p>Deilen cannot be held liable for any limitations of customers personal
+                                        devices when using our website. This includes, but is not limited to: Device
+                                        make or
+                                        model, operating system, browser, browser extensions, the use of autofill and
+                                        third-party payment processors such as Apple Pay or Paypal whereby details are
+                                        automatically entered.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    My plant does not look like the one on the website
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>The product images provided are for illustrative purposes only and have been
+                                        photographed under studio conditions.</p>
+                                    <p>Please be aware that as our plants are natural products there will be slight
+                                        variations between the product shown and the product shipped out which we have
+                                        no
+                                        control over.</p>
+                                    <p>Please be aware that some of our fruit bearing plants may not have any or as many
+                                        fruits as shown on the product page when it arrives but will grow as the plant
+                                        is
+                                        cared for. In some instances the fruit may become detached during transit but
+                                        will
+                                        not affect the health of the plant and will grow back.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Other Questions</h5>
+                    <p>If you have any other questions, please contact us at
+                        <a href="mailto:deilen.example@gmail.com">deilen.example@gmail.com</a> and we will do our best
+                        to answer them.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
@@ -327,6 +474,9 @@
 
 
     {% block postloadjs %}
+    <script>
+        $('.collapse').collapse()
+    </script>
     {% endblock %}
 
 
