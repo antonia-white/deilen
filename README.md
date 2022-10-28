@@ -232,7 +232,7 @@ To fork this project go to the top left of the repository, where you see the For
 
 ### Content 
 
-- All text throughout the website is self-written.
+- The Returns Policy was generated with [Termly's Return and Refund Policy Generator](https://termly.io/products/refund-return-policy-generator/).
 - 
 
 ### Media
