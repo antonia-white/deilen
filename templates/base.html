@@ -137,7 +137,7 @@
         </div>
         <!-- Mobile navbar -->
         <div class="row large-screen-hide">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <nav id="main-nav" class="navbar navbar-expand-lg navbar-light w-100">
                 <div class="col-4 my-auto ms-3 py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0">D e i l e n</h2>
@@ -149,7 +149,8 @@
                             <input class="form-control border border-secondary rounded-0" type="text" name="q"
                                 placeholder="Search...">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-dark border border-secondary rounded-0" type="submit">
+                                <button class="form-control btn btn-dark border border-secondary rounded-0"
+                                    type="submit">
                                     <span class="icon">
                                         <i class="material-symbols-outlined">search</i>
                                     </span>
@@ -158,10 +159,49 @@
                         </div>
                     </form>
                 </div>
-                <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h2 class="logo-font text-black my-0">D e i l e n</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Shop Now
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">All Plants</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <!-- TODO: create a for loop to list plant types -->
+                                    <li><a class="dropdown-item" href="#">Example</a></li>
+                                    <!-- ENDFOR -->
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Basket</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </nav>
         </div>
     </header>
@@ -310,7 +350,7 @@
                         <p class="text-muted">Last updated: October 28, 2022</p>
 
                         <p>This Shipping & Delivery Policy is part of our Terms and Conditions ("Terms") and should
-                            therefore be read alongside our main 
+                            therefore be read alongside our main
                             <a class="terms" data-bs-dismiss="modal" data-bs-toggle="modal"
                                 data-bs-target="#tcModal">Terms and Conditions</a>.
                         </p>
@@ -334,7 +374,7 @@
                             service to determine if the delivery address is acceptable to recieve the products. If these
                             precautions are not taken and as a result delivery fails, Deilen will not be responsible or
                             liable to give a refund.</p>
-                        <p>If you have questions about returns, please review our 
+                        <p>If you have questions about returns, please review our
                             <a class="terms" data-bs-dismiss="modal" data-bs-toggle="modal"
                                 data-bs-target="#retRefModal">Returns and Refunds Policy</a>.
                         </p>
@@ -388,10 +428,12 @@
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <p>We are unable to cancel your order once this has been placed and accepted by our
-                                    fulfilment centre in Wales.</p>
-                                    <p>Please note, perishable items such as plants are exempt from the right to cancel and
-                                    we are unable to process refunds where you have ordered the wrong product or changed
-                                    your mind.</p>
+                                        fulfilment centre in Wales.</p>
+                                    <p>Please note, perishable items such as plants are exempt from the right to cancel
+                                        and
+                                        we are unable to process refunds where you have ordered the wrong product or
+                                        changed
+                                        your mind.</p>
 
                                 </div>
                             </div>
