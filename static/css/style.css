@@ -93,6 +93,10 @@ header {
     color: #465c69;
 }
 
+.terms{
+    cursor: pointer;
+}
+
 /* Home page */
 .main-container {
     position: relative;
