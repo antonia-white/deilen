@@ -44,7 +44,7 @@ header {
 }
 
 .push-content {
-    height: 70px;
+    height: 60px;
 }
 
 /* Footer */
@@ -114,6 +114,9 @@ header {
 @media(max-width:767px) {
     .small-screen-hide {
         display: none;
+    }
+    .push-content{ 
+        height: 80px;
     }
 }
 

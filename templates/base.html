@@ -68,13 +68,15 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row pt-lg-2 pb-lg-2 d-none d-lg-flex">
+            <!-- Logo -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">D e i l e n</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <!-- Search -->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center small-screen-hide">
                 <form method="GET" action="">
                     <div class="input-group w-100">
                         <input class="form-control border border-secondary rounded-0" type="text" name="q"
@@ -89,8 +91,10 @@
                     </div>
                 </form>
             </div>
+            <!-- Links -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <!-- Account -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -112,6 +116,7 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Cart -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
@@ -130,9 +135,30 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <!-- Mobile navbar -->
+        <div class="row large-screen-hide">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                <div class="col-4 my-auto ms-3 py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="logo-font text-black my-0">D e i l e n</h2>
+                    </a>
+                </div>
+                <div class="col-5 my-auto py-1 py-lg-0 text-center">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-secondary rounded-0" type="text" name="q"
+                                placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-dark border border-secondary rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="material-symbols-outlined">search</i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
