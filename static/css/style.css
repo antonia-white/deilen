@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    font-family: 'Work Sans', sans-serif;
     background-color: #fcffff;
     height: calc(100vh - 164px);
 }
