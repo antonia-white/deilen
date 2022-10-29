@@ -138,11 +138,13 @@
         <!-- Mobile navbar -->
         <div class="row large-screen-hide">
             <nav id="main-nav" class="navbar navbar-expand-lg navbar-light w-100">
+                <!-- Logo -->
                 <div class="col-4 my-auto ms-3 py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0">D e i l e n</h2>
                     </a>
                 </div>
+                <!-- Search -->
                 <div class="col-5 my-auto py-1 py-lg-0 text-center">
                     <form method="GET" action="">
                         <div class="input-group w-100">
@@ -159,10 +161,12 @@
                         </div>
                     </form>
                 </div>
+                <!-- Burger button -->
                 <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Offcanvas Navbar -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -172,7 +176,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -180,17 +184,31 @@
                                     Shop Now
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">All Plants</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'plants' %}">All Plants</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <!-- TODO: create a for loop to list plant types -->
-                                    <li><a class="dropdown-item" href="#">Example</a></li>
-                                    <!-- ENDFOR -->
+                                    {% for type in all_types %}
+                                    <li><a class="dropdown-item text-capitalize" href="#">{{ type.name }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Basket</a>
+                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link"
+                            href="{% url 'view_bag' %}">
+                                    <i class="material-symbols-outlined">garden_cart</i>
+                                    <span class="my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </span>
+                                    </a>
+                            </li>
+                            <br>
+                            <li>
+                                <hr>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">My Account</a>
