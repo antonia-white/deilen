@@ -7,7 +7,8 @@ class PlantType(models.Model):
     name = models.CharField(max_length=254)
 
     def __str__(self):
-        return self.name
+        formatted_name = self.name.replace('_', ' ')
+        return formatted_name
 
 
 class PlantDifficulty(models.Model):
