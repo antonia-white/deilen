@@ -26,6 +26,10 @@ body {
     height: calc(100vh - 164px);
 }
 
+#offers-block {
+    padding-top:50%;
+}
+
 /* Header */
 
 header {
@@ -104,24 +108,24 @@ header {
     justify-content: center;
 }
 
-#offers-block {
-    padding-top:50%;
-}
 
 /* Media Queries */
 
-/* Small screens bootstrap 5 */
-@media(max-width:767px) {
+/* Small screens and smaller bootstrap 5 */
+@media(max-width:776px) {
     .small-screen-hide {
         display: none;
     }
     .push-content{ 
         height: 80px;
     }
+    #offers-block {
+        padding-top:1.5em;
+    }
 }
 
-/* Medium screens bootstrap 5 */
-@media(max-width:991px) {
+/* Medium screens and up bootstrap 5 */
+@media(min-width:992px) {
     .medium-screen-hide {
         display: none;
     }
