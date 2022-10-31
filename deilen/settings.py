@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
+                'plants.custom_context_processor.types_renderer',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -190,6 +191,12 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+
+# Delievry values
 FREE_DELIVERY_THRESHOLD = 666
 STANDARD_DELIVERY_PERCENTAGE = 10
 
