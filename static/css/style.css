@@ -1,3 +1,6 @@
+/* TODO: remove hover font size */
+/* causes vertical displacement */
+
 /* Google icons */
 .material-symbols-outlined {
   font-variation-settings:
@@ -108,6 +111,13 @@ header {
     justify-content: center;
 }
 
+/* Plants page */
+
+/* Filtering navbar */
+div.navbar {
+    margin: 0 auto;
+}
+
 
 /* Media Queries */
 
@@ -121,6 +131,9 @@ header {
     }
     #offers-block {
         padding-top:1.5em;
+    }
+    .small-center {
+        text-align:center;
     }
 }
 
