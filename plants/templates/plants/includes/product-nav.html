@@ -1,0 +1,38 @@
+<div class="navbar" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 small-center" href="#" id="all-plants-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Plants
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-plants-link">
+                <a href="{% url 'plants' %}?sort=price&direction=asc" class="dropdown-item">By Price (Low-High)</a>
+                <a href="{% url 'plants' %}?sort=plant_type&direction=asc" class="dropdown-item ">By Type (A-Z)</a>
+                <a href="{% url 'plants' %}?sort=plant_difficulty&direction=asc" class="dropdown-item ">By Care Difficulty (A-Z)</a>
+                <a href="{% url 'plants' %}" class="dropdown-item">All Plants</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 small-center" href="#" id="types-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plant Types
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="types-link">
+                {% for type in all_types %}
+                <a href="{% url 'plants' %}?plant_type={{ type }}" class="dropdown-item text-capitalize">{{ type }}</a>
+                {% endfor %}
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 small-center" href="#" id="difficulty-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Care Difficulties
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="difficulty-link">
+                <a href="{% url 'plants' %}?plant_difficulty=easy" class="dropdown-item">Easy</a>
+                <a href="{% url 'plants' %}?plant_difficulty=medium" class="dropdown-item">Medium</a>
+                <a href="{% url 'plants' %}?plant_difficulty=hard" class="dropdown-item">Hard</a>
+            </div>
+        </li>
+
+    </ul>
+</div>
