@@ -233,7 +233,8 @@ To fork this project go to the top left of the repository, where you see the For
 ### Content 
 
 - The Returns Policy was generated with [Termly's Return and Refund Policy Generator](https://termly.io/products/refund-return-policy-generator/).
-- 
+- The Shipping and Delivery Policy was generated with [Termly's Shipping Policy Generator](https://termly.io/products/shipping-policy-generator/) and adapted.
+- Frequently asked questions and answers content was sampled from the houseplant shop [Bloombox Club](https://bloomboxclub.com/).
 
 ### Media
 
