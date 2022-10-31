@@ -11,9 +11,23 @@ def all_plants(request):
     """ A view to show all plants, including sorting and search queries """
 
     plants = Plant.objects.all()
+    query = None
+
+    if request.GET:
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "Please enter search criteria!")
+                return redirect(reverse('plants'))
+            
+            # Case insensitive searching, name and description
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            plants = plants.filter(queries)
 
     context = {
         'plants': plants,
+        'search_term': query,
     }
 
     return render(request, 'plants/plants.html', context)
