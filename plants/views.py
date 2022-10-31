@@ -12,8 +12,37 @@ def all_plants(request):
 
     plants = Plant.objects.all()
     query = None
+    plant_types = None
+    plant_difficulties = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                plants = plants.annotate(lower_name=Lower('name'))
+            if sortkey == 'plant_type':
+                sortkey = 'plant_type__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            plants = plants.order_by(sortkey)
+
+        if 'plant_type' in request.GET:
+            plant_types = request.GET['plant_type'].split(',')
+            plants = plants.filter(plant_type__name__in=plant_types)
+            plant_types = PlantType.objects.filter(name__in=plant_types)
+
+        if 'plant_difficulty' in request.GET:
+            plant_difficulties = request.GET['plant_difficulty'].split(',')
+            plants = plants.filter(
+                plant_difficulty__name__in=plant_difficulties)
+            plant_difficulties = PlantDifficulty.objects.filter(
+                name__in=plant_difficulties)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -25,9 +54,14 @@ def all_plants(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             plants = plants.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'plants': plants,
         'search_term': query,
+        'current_plant_types': plant_types,
+        'current_plant_difficulties': plant_difficulties,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'plants/plants.html', context)
