@@ -70,6 +70,28 @@
                         </a>
                     </p>
                     {% endif %} 
+
+                    <!-- Difficulty -->
+                    {% if plant.plant_difficulty %}
+                    <p class="text-muted small mt-1 mb-0">
+                        Care Difficulty: 
+                        <a class="text-muted"
+                            href="{% url 'plants' %}?plant_difficulty={{ plant.plant_difficulty.name }}">
+                            {% if plant.plant_difficulty.name == "easy" %}
+                                <i class="material-symbols-outlined">sentiment_very_satisfied</i>
+                            {% elif plant.plant_difficulty.name == "medium" %}
+                                <i class="material-symbols-outlined">sentiment_satisfied</i>
+                            {% elif plant.plant_difficulty.name == "hard" %}
+                                <i class="material-symbols-outlined">sentiment_neutral</i>
+                            {% else %}
+                                <i class="material-symbols-outlined"><span class="material-symbols-outlined">
+                                    question_mark
+                                    </span></i>
+                            {% endif %}
+                            {{ plant.plant_difficulty.name }}
+                        </a>
+                    </p>
+                {% endif %}
                     
                     <p class="lead mb-0 text-left font-weight-bold">£{{ plant.price }}</p>
                     
