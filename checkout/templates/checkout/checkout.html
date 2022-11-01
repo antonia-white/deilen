@@ -50,8 +50,8 @@
                             {% if item.plant.image %}
                                 <img src="{{ item.plant.image.url }}" alt="{{ plant.name }}" class="w-100">
                             {% else %}
-                            <!-- TODO: add alternative image -->
-                                <img src="" alt="{{ plant.name }}" class="w-100">
+                            <!-- TODO: check this works -->
+                            <img src="{{ MEDIA_URL }}no-plant-img-avaliable.png" alt="{{ plant.name }}" class="w-100">
                             {% endif %}    
                         </a>
                     </div>
@@ -122,12 +122,12 @@
                 </fieldset>
                 <!-- Payment -->
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment Info</legend>
+                    <!--Stripe Card Element-->
                     <div class="mb-3" id="card-element"></div>
-                    <!-- Used to display form errors -->
+                    <!--Div to display any errors-->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <!--Hidden field to get the payment intent ID-->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
@@ -156,4 +156,11 @@
         <div class="col-lg-3"></div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
