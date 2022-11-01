@@ -23,6 +23,12 @@
                 {% if current_plant_types %}
                     {% for c in current_plant_types %}
                         {{ c.name }} plants
+                        <!-- TODO: fix display of air purifier heading -->
+                        <!-- TODO: fix url of air purifiers which has a space in it -->
+                        <!-- https://8000-antoniawhite-deilen-0zlim23rc7z.ws-eu73.gitpod.io/plants/?plant_type=air%20purifier -->
+                        {% if c == "air purifier" %}
+                            air purifiers
+                        {% endif %}
                     {% endfor %}
                 {% elif current_plant_difficulties %}
                     {% for c in current_plant_difficulties %}
@@ -49,7 +55,13 @@
                                     </div>
                                 </a>
                             {% else %}
-                                <!-- TODO: alternate img -->
+                            <!-- TODO: check this works -->
+                            <a href="{% url 'plant_detail' plant.id %}">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
+                                    <img class="card-img-top img-fluid hover-zoom" src="{{ MEDIA_URL }}no-plant-img-avaliable.png"
+                                        alt="{{ plant.name }}">
+                                </div>
+                            </a>
                             {% endif %}
                             <a href="{% url 'plant_detail' plant.id %}">
                                 <div class="card-body pb-0">
