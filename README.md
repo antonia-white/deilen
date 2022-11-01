@@ -2,7 +2,7 @@
 
 This website is a full stack ecommerce store to allow people to buy house plants and plant related homeware from the mockup plant company Deilen (the Welsh word for 'leaf').
 
-To visit the website, please visit the deployed site [here](insert link to deployed site).
+To visit the website, please visit the deployed site [here](https://deilen-shop.herokuapp.com/).
 
 ![Responsive Mockup](documentation/testing/responsive-mockup.png)
 
@@ -147,7 +147,7 @@ __Feature__
 
 - [GitPod](https://gitpod.io) was used as a cloud based iDE
 - [GitHub](https://github.com/) was used to manage the Git repository
-- [Heroku](link to deployed site) was used for deployment
+- [Heroku](https://deilen-shop.herokuapp.com/) was used for deployment
 - [Git](https://git-scm.com/) was used for version control
 - [Django](https://www.djangoproject.com/) used as the project's web framework
 - [Pip3](https://pip.pypa.io/en/stable/) was the package manager used to install the dependencies
@@ -175,7 +175,7 @@ To view all testing documentation, refer to [TESTING.md](TESTING.md).
 
 ## Deployment
 
-The site was deployed to Heroku. The live link can be found [here](link to deployed site)
+The site was deployed to Heroku. The live link can be found [here](https://deilen-shop.herokuapp.com/)
 
 The steps to deploy a Heroku app are as follows: 
 1.  Log in to Heroku or create an account if required.
