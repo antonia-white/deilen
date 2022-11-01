@@ -19,7 +19,19 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="">All Houseplants</h2>
+            <h2 class="text-capitalize">
+                {% if current_plant_types %}
+                    {% for c in current_plant_types %}
+                        {{ c.name }} plants
+                    {% endfor %}
+                {% elif current_plant_difficulties %}
+                    {% for c in current_plant_difficulties %}
+                        {{ c.name }} to care plants
+                    {% endfor %}
+                {% else %}
+                    All Houseplants
+                {% endif %}
+            </h2>
             <br>
         </div>
     </div>
