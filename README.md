@@ -14,18 +14,33 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   - People looking to gift a house plant to a loved one.
 
 ## User Stories
-
-As a user of the Deilen website, I want to:
   1. User Authentication / Accounts
      - Site users should be able to register an account that allows a user to sign in and out of the site.
      - A user should be able to create a profile to store personal information to make checkout easier with default personal information to automatically populate form fields at checkout.
      - Users should be able to ammend profile information to keep records up-to-date and also have the ability to delete their account.
      - A user should be able to reset their password via email authentication so the account is not lost if the password is forgotten.
   2. Site Navigation
-     - hello
+     - Site users should be able to navigate fluidly throughout the website without having to use the back button.
+     - A user should be able to direct themselves through the site with confidence and clarity to where they are navigating too.
+     - Users should be able to search the site for specific related content that they seek.
   3. Shopping
-  4. User Checkout
-  5. Site Admin
+     -  Users should be able to view the products that Deilen offer for purchase.
+     - A user should be able to add any products they want to buy to their bag for review.
+     - A user should be able to add multiples of an item to their bag if they so wish.
+     - Users should be able to filter and sort results based on their shopping goals.
+     - Site users should be able to view all product information before adding a product to their bag.
+  4. Bag (Wheelbarrow)
+     - Users should be able to view all items, and quantities that they have added to their wheelbarrow.
+     - Site users should be able to amend their order in their wheelbarrow, changing the quantities of a product or removing the product entirely from the wheelbarrow.
+     - A user should be shown the delivery costs and any additional costs of their order.
+     - Users should be able to safely navigate to the checkout to finalise their order.
+  5. User Checkout
+     - A user should be able to checkout securely and pay for their order, finalising the transaction and confirming delivery address.
+     - Site users should be able to checkout and purchase products regardless of if they have a Deilen account or not.
+  6. Profiles
+    - 
+  8.  Site Admin
+    - 
 
 ***
 
