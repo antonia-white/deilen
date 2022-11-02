@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .forms import ContactForm
+
 
 def view_contact(request):
     """
