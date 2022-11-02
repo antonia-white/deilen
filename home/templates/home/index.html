@@ -13,8 +13,13 @@
 <div class="container-fluid bg-light">
     <br class="small-screen-hide">
     <div class="row main-container">
-        <div class="col-12 col-sm-8">
+        <div id="image-container" class="col-12 col-sm-8">
             <img class="img-fluid" src="{{ MEDIA_URL }}houseplants.jpg" alt="Assortment of houseplants">
+            <div class="col-6 text-center">
+                <a href="{% url 'plants' %}">
+                    <p class="btn btn-outline-dark btn-xlarge pt-2">Shop now</p>
+                </a>
+            </div>
         </div>
         <div class="col-12 col-sm-4 flex-container">
             <!-- TODO: change 666 to become a variable { {free_delivery_threshold}} -->
@@ -30,11 +35,6 @@
         <div class="col-6 text-center">
             <a href="">
                 <p class="btn btn-dark btn-lg pt-2">Register</p>
-            </a>
-        </div>
-        <div class="col-6 text-center">
-            <a href="{% url 'plants' %}">
-                <p class="btn btn-dark btn-lg pt-2">Shop now</p>
             </a>
         </div>
     </div>

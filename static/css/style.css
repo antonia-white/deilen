@@ -39,6 +39,15 @@ body {
     padding-top:50%;
 }
 
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 28px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
 /* Header */
 
 header {
@@ -117,6 +126,25 @@ header {
     justify-content: center;
 }
 
+#image-container {
+    position: relative;
+}
+
+#image-container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #fcffff60;
+    color:black;
+}
+
+#image-container .btn:hover {
+    background-color: #465c6990;
+    color: #fcffff;
+  }
+
 /* Plants page */
 
 /* Filtering navbar */
@@ -141,6 +169,9 @@ div.navbar {
     .small-center {
         text-align:center;
     }
+    .col-4 > a:nth-child(1) > h2:nth-child(1) {
+        font-size: large;
+       }       
 }
 
 /* Medium screens and up bootstrap 5 */
