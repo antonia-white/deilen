@@ -56,8 +56,10 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
 
 - Google Fonts
   Font styles were taken from the open source [Google Fonts](https://fonts.google.com/).
-  - the typography for the text throughout the website is [Font Name](Link To Font). Small blurb about font.
-  - The typography for the brand logo is font-family [Font Name](Link To Font). Small blurb about font.
+  - the typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
+  - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). Which was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
+- Accessibility
+  <!-- TODO: I removed altering font size on hover after consultation as it causes vertical displacement -->
 
 ***
 
