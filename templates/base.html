@@ -53,7 +53,7 @@
         crossorigin="anonymous"></script>
     <!-- Google Icons -->
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f82ec574c3.js" crossorigin="anonymous"></script>
     <!-- Stripe -->
@@ -146,7 +146,7 @@
                 </div>
                 <!-- Search -->
                 <div class="col-5 my-auto py-1 py-lg-0 text-center">
-                    <form method="GET" action="">
+                    <form>
                         <div class="input-group w-100">
                             <input class="form-control border border-secondary rounded-0" type="text" name="q"
                                 placeholder="Search...">
@@ -170,7 +170,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h2 class="logo-font text-black my-0">D e i l e n</h2>
+                        <h2 id="offcanvasNavbarLabel" class="logo-font text-black my-0">D e i l e n</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -206,7 +206,6 @@
                                     </span>
                                     </a>
                             </li>
-                            <br>
                             <li>
                                 <hr>
                             </li>
@@ -565,11 +564,11 @@
 
 
     {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
     {% endblock %}
 
+    <script>
+        $('.toast').toast('show');
+    </script>
 
 </body>
 
