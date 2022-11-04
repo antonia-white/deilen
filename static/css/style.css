@@ -145,6 +145,10 @@ footer {
 
 /* Plants page */
 
+img.card-img-top {
+    border-radius: 0;
+}
+
 /* Filtering navbar */
 div.navbar {
     margin: 0 auto;
