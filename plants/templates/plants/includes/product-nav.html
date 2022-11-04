@@ -1,4 +1,4 @@
-<div class="navbar" id="main-nav">
+<div class="navbar" id="plant-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5 small-center" href="#" id="all-plants-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,7 +18,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="types-link">
                 {% for type in all_types %}
-                <a href="{% url 'plants' %}?plant_type={{ type }}" class="dropdown-item text-capitalize">{{ type }}</a>
+                <a href="{% url 'plants' %}?plant_type={{ type.name }}" class="dropdown-item text-capitalize">{{ type }}</a>
                 {% endfor %}
             </div>
         </li>
