@@ -13,16 +13,14 @@ def bag_contents(request):
 
     for item_id, item_data in bag.items():
 
-            plant = get_object_or_404(Plant, pk=item_id)
-            total += item_data * plant.price
-            product_count += item_data
-            bag_items.append({
-                'item_id': item_id,
-                'quantity': item_data,
-                'plant': plant,
-            }
-        )
-        
+        plant = get_object_or_404(Plant, pk=item_id)
+        total += item_data * plant.price
+        product_count += item_data
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': item_data,
+            'plant': plant,
+        })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

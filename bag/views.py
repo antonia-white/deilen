@@ -33,7 +33,8 @@ def add_to_bag(request, item_id):
 
     else:
         bag[item_id] = quantity
-        messages.success(request, f"{plant.name} has been added to your wheelbarrow")
+        messages.success(
+            request, f"{plant.name} has been added to your wheelbarrow")
 
     request.session["bag"] = bag
     return redirect(redirect_url)

@@ -6,6 +6,7 @@ from .forms import OrderForm
 
 import stripe
 
+
 def checkout(request):
     """
     A view to return the checkout page.

@@ -49,9 +49,10 @@ def all_plants(request):
             if not query:
                 messages.error(request, "Please enter search criteria!")
                 return redirect(reverse('plants'))
-            
+
             # Case insensitive searching, name and description
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             plants = plants.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
