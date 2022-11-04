@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 /* 
 All code in this section comes from
 the Stripe documentation
