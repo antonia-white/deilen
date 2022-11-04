@@ -44,8 +44,8 @@
                                     {% include "bag/plant-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
-                                    <p class="my-0">Price Each: ${{ item.plant.price }}</p>
-                                    <p><strong>Subtotal: </strong>${{ item.plant.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">Price Each: £{{ item.plant.price }}</p>
+                                    <p><strong>Subtotal: </strong>£{{ item.plant.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                             </div>
                             <hr>
@@ -112,7 +112,7 @@
 {{ block.super }}
 {% include 'plants/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
