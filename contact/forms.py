@@ -20,15 +20,12 @@ class ContactForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             "name": "Name",
-            "from_email": "Email Address",
-            "phone_number": "Phone Number",
-            "message": "Message",
+            "from_email": "example@email.com",
+            "phone_number": "0123456789",
+            "message": "Please enter your message here...",
         }
 
         self.fields["name"].widget.attrs["autofocus"] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f"{placeholders[field]} *"
-            else:
-                placeholder = placeholders[field]
+            placeholder = placeholders[field]
             self.fields[field].widget.attrs["placeholder"] = placeholder

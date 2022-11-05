@@ -28,15 +28,16 @@
                 {% csrf_token %}
                 <!-- Personal Info -->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Personal Information</legend>
+                    <legend class="fieldset-label small text-black px-2 w-auto text-capitalize">Your personal information</legend>
                     {{ contact_form.name | as_crispy_field }}
                     {{ contact_form.from_email | as_crispy_field }}
                     {{ contact_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <!-- Message -->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Message</legend>
+                    <legend class="fieldset-label small text-black px-2 w-auto text-capitalize">How can we help?</legend>
                     {{ contact_form.message | as_crispy_field }}
+                    <p class="text-muted text-end"><small>* required fields</small></p>
                 </fieldset>
             </form>
         </div>
