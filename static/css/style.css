@@ -64,6 +64,14 @@ header {
     height: 60px;
 }
 
+.cart-present {
+    color: rgb(15, 48, 196);
+}
+
+.header-list-item:hover {
+    color:#63372c;
+}
+
 /* Footer */
 
 footer {

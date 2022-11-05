@@ -98,7 +98,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
+                            <div class="header-list-item text-center">
                                 <div><i class="material-symbols-outlined">account_circle</i></div>
                                 <p class="my-0">My Account</p>
                             </div>
@@ -118,9 +118,9 @@
                     </li>
                     <!-- Cart -->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}cart-present font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
-                            <div class="text-center">
+                            <div class="header-list-item text-center">
                                 <div><i class="material-symbols-outlined">garden_cart</i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
