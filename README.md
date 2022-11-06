@@ -154,6 +154,12 @@ __Feature__
 
 ### Features Left to Implement 
 
+- Update preloader to be more themed to the site.
+ - This has not yet been done due to time constraints, so [Bootstrap's spinners](https://getbootstrap.com/docs/5.2/components/spinners/#about) have been used as an interim. 
+ - In the future, I will work to replace the Bootstrap spinner with either this [potted-plant](https://icons8.com/icon/OKMC0MrrQY5I/potted-plant) or [plant in sunshine](https://icons8.com/icon/YW744aCDWOMe/plant) preloader.
+
+- Add google pay / paypal for easier checkout.
+
 - Describe the feature
   - Why hasn't it yet been implemented and what steps would you take to start implementing this feature.
 
