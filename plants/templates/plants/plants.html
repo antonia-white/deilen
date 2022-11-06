@@ -20,10 +20,11 @@
             <h2 class="text-capitalize">
                 {% if current_plant_types %}
                     {% for c in current_plant_types %}
-                        {{ c }} plants
+                        <!-- TODO: fix h2 element when air purifying plants are seected -->
                         {% if c == "air purifier" %}
-                            air purifiers
+                            air purifying plants
                         {% endif %}
+                        {{ c }} plants
                     {% endfor %}
                 {% elif current_plant_difficulties %}
                     {% for c in current_plant_difficulties %}
