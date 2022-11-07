@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row push-content">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid bg-light">
+    <!-- Image -->
+    <div class="row main-container text-center">
+        <!-- TODO: check that this renders -->
+        <div id="image-container" class="col-12">
+            <img class="img-fluid" src="{{ MEDIA_URL }}wasteland.jpg" alt="Wasteland">
+        </div>
+    </div>
+    <!-- Message -->
+    <div class="text-center">
+        <h3>Whoops...</h3>
+        <p class="text-muted">Error: 404</p>
+        <br>
+        <p>Looks like you've found nothing, there's only wasteland here.</p>
+        <p>Please find your way back to the
+            <a href="{% url 'home' %}">oasis <span class="material-symbols-outlined">
+                    potted_plant
+                </span></a>.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
