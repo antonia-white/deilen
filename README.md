@@ -160,6 +160,8 @@ __Feature__
 
 - Add google pay / paypal for easier checkout.
 
+- Auto populate countries field with the value 'United Kingdom' as Deilen are currently unable to ship abroad.
+
 - Describe the feature
   - Why hasn't it yet been implemented and what steps would you take to start implementing this feature.
 
