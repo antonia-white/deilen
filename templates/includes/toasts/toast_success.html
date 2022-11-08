@@ -1,4 +1,4 @@
-<div class="toast bottom-0 end-0 rounded-0 custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast bottom-0 end-0 rounded-1 custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header">
         <img src="{{ MEDIA_URL }}favicon-16x16_1.png" class="rounded me-2" alt="">
@@ -41,7 +41,7 @@
                         <span class="float-right">£{{ total|floatformat:2 }}</span>
                     </p>
                 </strong>
-                <a href="{% url 'view_bag' %}" class="btn btn-dark btn-block rounded-0">
+                <a href="{% url 'view_bag' %}" class="btn btn-dark btn-block rounded-1">
                     <span class="text-uppercase">Go To Secure Checkout</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>
