@@ -1,0 +1,20 @@
+/* Placeholders */
+#profile-update-form::placeholder {
+    color: #b4b7ca;
+}
+
+/* Form input */
+#profile-update-form .form-control {
+    color: #000
+}
+
+/* All country options back except placeholder */
+#id_default_country,
+#id_default_country option:not(:first-child) {
+  color: #000;
+}
+
+/* Country option placeholder */
+#id_default_country option:first-child {
+  color: #b4b7ca !important;
+}
