@@ -5,6 +5,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import OrderLineItem, FullOrder
 from plants.models import Plant
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
 import stripe
