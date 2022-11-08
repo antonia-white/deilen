@@ -16,7 +16,7 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form':form,
-        'orders':order,
+        'orders':orders,
     }
 
     return render(request, template, context)
