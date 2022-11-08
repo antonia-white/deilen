@@ -1,13 +1,54 @@
 <div class="toast bottom-0 end-0 rounded-0 custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header">
-      <img src="{{ MEDIA_URL }}favicon-16x16_1.png" class="rounded me-2" alt="">
-      <strong class="me-auto text-success">Deilen</strong>
-      <small>Success</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <img src="{{ MEDIA_URL }}favicon-16x16_1.png" class="rounded me-2" alt="">
+        <strong class="me-auto text-success">Deilen</strong>
+        <small>Success</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+            </div>
+        </div>
+        {% if grand_total and not on_profile_page %}
+        <hr class="mt-1 mb-3">
+        <!--Displays bag items preview-->
+        <p class="logo-font bg-white py-1">Your Bag ({{ product_count }})</p>
+        <div class="bag-notification-wrapper">
+            {% for item in bag_items %}
+            <div class="row">
+                <div class="col-3 my-1">
+                    {% if item.plant.image %}
+                    <img src="{{ item.plant.image.url }}" alt="{{ item.plant.name }}" class="w-100">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}no-plant-img-avaliable.png" alt="{{ item.plant.name }}" class="w-100">
+                    {% endif %}
+                </div>
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ item.plant.name}}</strong></p>
+                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    <p class="mt-3 mb-1 text-dark">
+                        Total{% if free_delivery_delta > 0 %} <span class="fw-lighter">(Exc. delivery)</span>{% endif %}:
+                        <span class="float-right">£{{ total|floatformat:2 }}</span>
+                    </p>
+                </strong>
+                <a href="{% url 'view_bag' %}" class="btn btn-dark btn-block rounded-0">
+                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
-  </div>
-  
+</div>
