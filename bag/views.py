@@ -28,13 +28,14 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
         messages.success(
             request,
-            f"Updated {plant.name} in your wheelbarrow to {bag[item_id]}",
+            f"Updated {plant.name} in your wheelbarrow to a \
+                quantity of {bag[item_id]}.",
         )
 
     else:
         bag[item_id] = quantity
         messages.success(
-            request, f"{plant.name} has been added to your wheelbarrow")
+            request, f"{plant.name} has been added to your wheelbarrow.")
 
     request.session["bag"] = bag
     return redirect(redirect_url)
@@ -51,14 +52,14 @@ def adjust_bag(request, item_id):
         bag[item_id] = quantity
         messages.success(
             request,
-            f"The quantity of {plant.name} in your bag has been \
-                updated to {bag[item_id]}",
+            f"The quantity of {plant.name} in your wheelbarrow has been \
+                updated to {bag[item_id]}.",
         )
 
     else:
         bag.pop(item_id)
         messages.success(
-            request, f"{plant.name} has been removed from your bag"
+            request, f"{plant.name} has been removed from your wheelbarrow."
         )
 
     request.session["bag"] = bag
@@ -73,12 +74,12 @@ def remove_from_bag(request, item_id):
         bag = request.session.get("bag", {})
         bag.pop(item_id)
         messages.success(
-            request, f"{plant.name} has been removed from your bag"
+            request, f"{plant.name} has been removed from your wheelbarrow."
         )
 
         request.session["bag"] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f"Error removing {e} from your bag")
+        messages.error(request, f"Error removing {e} from your wheelbarrow.")
         return HttpResponse(status=500)

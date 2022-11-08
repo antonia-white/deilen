@@ -47,7 +47,8 @@ def all_plants(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Please enter search criteria!")
+                messages.error(request, "Oops! You didn't search for \
+                    anything. Here's all of our amazing products instead!")
                 return redirect(reverse('plants'))
 
             # Case insensitive searching, name and description
