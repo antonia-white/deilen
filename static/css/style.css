@@ -126,6 +126,22 @@ footer {
     cursor: pointer;
 }
 
+/* Toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999999999999;
+}
+
+.toast-capper {
+    height: 5px;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
 /* Home page */
 .main-container {
     position: relative;
