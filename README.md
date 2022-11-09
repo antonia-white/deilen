@@ -161,6 +161,10 @@ __Feature__
 - Add google pay / paypal for easier checkout.
 
 - Auto populate countries field with the value 'United Kingdom' as Deilen are currently unable to ship abroad.
+  - https://pypi.org/project/django-countries/#show-certain-countries-first
+  - https://stackoverflow.com/questions/44025372/setting-a-default-value-in-choicfield-in-django
+
+- Webhooks
 
 - Describe the feature
   - Why hasn't it yet been implemented and what steps would you take to start implementing this feature.
