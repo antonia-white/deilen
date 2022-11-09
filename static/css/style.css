@@ -43,6 +43,10 @@ body {
             border-radius: 8px;
 }
 
+a {
+    outline: none !important;
+}
+
 /* Header */
 
 header {
@@ -193,7 +197,7 @@ div.navbar {
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radius: 0;
+    border-radius: 0.25rem;
     margin-top: 8px;
 }
 
@@ -217,12 +221,12 @@ div.navbar {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: #222;
+    border-radius: 0.25rem;
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
     margin: 8px 0;
 
     /* standard bootstrap btn transitions */
@@ -232,8 +236,8 @@ div.navbar {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
-    border-color: #222;
+    background-color: #424649;
+    border-color: #424649;
 }
 
 .allauth-form-inner-content a {
