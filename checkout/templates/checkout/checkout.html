@@ -50,7 +50,6 @@
                             {% if item.plant.image %}
                                 <img src="{{ item.plant.image.url }}" alt="{{ plant.name }}" class="w-100">
                             {% else %}
-                            <!-- TODO: check this works -->
                             <img src="{{ MEDIA_URL }}no-plant-img-avaliable.png" alt="{{ plant.name }}" class="w-100">
                             {% endif %}    
                         </a>
