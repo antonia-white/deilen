@@ -209,8 +209,26 @@
                             <li>
                                 <hr>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Account</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu">
+                                    {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <li><a class="dropdown-item" href="">Product Management</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                        {% endif %}
+                                        <li><a class="dropdown-item text-capitalize" href="{% url 'profile' %}">My Profile</a></li>
+                                        <li><a class="dropdown-item text-capitalize" href="{% url 'account_logout' %}">Logout</a></li>
+                                    {% else %}
+                                        <li><a class="dropdown-item text-capitalize" href="{% url 'account_signup' %}">Register</a></li>
+                                        <li><a class="dropdown-item text-capitalize" href="{% url 'account_login' %}">Login</a></li>
+                                    {% endif %}
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
