@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Plant, PlantDifficulty, PlantType
+from .forms import PlantForm
 
 
 def all_plants(request):
@@ -79,3 +80,14 @@ def plant_detail(request, plant_id):
     }
 
     return render(request, "plants/plant_detail.html", context)
+
+
+def add_plant(request):
+    """Add plant to the store"""
+    form = PlantForm()
+    template = 'plants/add_plant.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
