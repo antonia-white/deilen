@@ -23,13 +23,11 @@ def view_contact(request):
         # Save contact form if valid
         if contact_form.is_valid():
             customer_message = contact_form.save()
-            # Does ID not exist??
-            print(customer_message)
 
             # Feed contact_success the message id
             return redirect(
                 reverse("contact_success", args=[
-                    customer_message._id])
+                    customer_message.id])
             )
         else:
             messages.error(
@@ -47,18 +45,18 @@ def view_contact(request):
 
 
 # Process message success
-def contact_success(request, _id):
+def contact_success(request, id):
     """
     Handle successful contact messages
     """
 
-    contact = get_object_or_404(Contact, contact_id=_id)
+    contact = get_object_or_404(Contact, id=id)
 
     # Toast message success
     messages.success(
         request,
         f"Thank you {contact.name} for getting in touch! \
-        We have recieved your message and will reply as \
+        We have received your message and will reply as \
         soon as we can. Please check your inbox at \
         {contact.from_email} for our reply.",
     )
