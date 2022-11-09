@@ -84,6 +84,25 @@ def plant_detail(request, plant_id):
 
 def add_plant(request):
     """Add plant to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, no access - admins only!")
+        return redirect(reverse("home"))
+
+    if request.method == "POST":
+        form = PlantForm(request.POST, request.FILES)
+        if form.is_valid():
+            plant = form.save()
+            messages.success(request, "Successfully added plant product!")
+            return redirect(reverse("plant_detail", args=[plant.id]))
+        else:
+            messages.error(
+                request,
+                "Failed to add plant product. Please \
+                check the form and try again.",
+            )
+    else:
+        form = PlantForm()
+
     form = PlantForm()
     template = 'plants/add_plant.html'
     context = {
