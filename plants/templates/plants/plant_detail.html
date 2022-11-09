@@ -33,7 +33,7 @@
                         {% else %}
 
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ plant.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-plant-img-avaliable.png" alt="{{ plant.name }}">
                         </a>
 
                     {% endif %}
@@ -61,7 +61,7 @@
                                 <i class="material-symbols-outlined">local_florist</i>
                             {% elif plant.plant_type.name == "large" %}
                                 <i class="material-symbols-outlined">nature</i>
-                            {% elif plant.plant_type.name == "air purifier" %}
+                            {% elif plant.plant_type.name == "air_purifier" %}
                                 <i class="material-symbols-outlined">air</i>
                             {% else %}
                                 <i class="material-symbols-outlined">potted_plant</i>

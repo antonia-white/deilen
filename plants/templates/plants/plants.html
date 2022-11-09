@@ -20,10 +20,6 @@
             <h2 class="text-capitalize">
                 {% if current_plant_types %}
                     {% for c in current_plant_types %}
-                        <!-- TODO: fix h2 element when air purifying plants are seected -->
-                        {% if c == "air purifier" %}
-                            air purifying plants
-                        {% endif %}
                         {{ c }} plants
                     {% endfor %}
                 {% elif current_plant_difficulties %}
@@ -51,7 +47,6 @@
                                     </div>
                                 </a>
                             {% else %}
-                            <!-- TODO: check this works -->
                             <a href="{% url 'plant_detail' plant.id %}">
                                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                                     <img class="card-img-top img-fluid hover-zoom" src="{{ MEDIA_URL }}no-plant-img-avaliable.png"
@@ -81,12 +76,12 @@
                                                     <i class="material-symbols-outlined">local_florist</i>
                                                     {% elif plant.plant_type.name == "large" %}
                                                     <i class="material-symbols-outlined">nature</i>
-                                                    {% elif plant.plant_type.name == "air purifier" %}
+                                                    {% elif plant.plant_type.name == "air_purifier" %}
                                                     <i class="material-symbols-outlined">air</i>
                                                     {% else %}
                                                     <i class="material-symbols-outlined">potted_plant</i>
                                                     {% endif %}
-                                                    {{ plant.plant_type.name }}
+                                                    {{ plant.plant_type }}
                                                 </a>
                                             </p>
                                         {% endif %}
