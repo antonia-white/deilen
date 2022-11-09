@@ -24,7 +24,7 @@
     <div class="d-flex flex-row">
         <div class="col-lg-3"></div>
         <div class="col-12 col-lg-6">
-            <form action="" method="POST" id="payment-form">
+            <form action="{% url 'contact' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <!-- Personal Info -->
                 <fieldset class="rounded px-3 mb-5">
@@ -38,6 +38,9 @@
                     <legend class="fieldset-label small text-black px-2 w-auto text-capitalize">How can we help?</legend>
                     {{ contact_form.message | as_crispy_field }}
                     <p class="text-muted text-end"><small>* required fields</small></p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-lg btn-dark rounded-1">Send</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
