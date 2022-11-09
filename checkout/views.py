@@ -170,7 +170,6 @@ def checkout_success(request, order_number):
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-
     send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [{order.email}])
 
     if "bag" in request.session:
