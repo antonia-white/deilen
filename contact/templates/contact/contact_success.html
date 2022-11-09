@@ -1,7 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row push-content">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-
-<h1>Thank you for getting in touch!</h1>
-
+<div class="container mb-2">
+    <h2 class="logo-font">Thank you!</h2>
+    <hr>
+    <p>Your message has been recieved!</p>
+    <a href="{% url 'home' %}" class="btn btn-lg btn-outline-dark rounded-1">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase">Back Home</span>
+    </a>
+</div>
 {% endblock %}
