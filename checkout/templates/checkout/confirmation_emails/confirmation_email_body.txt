@@ -1,0 +1,20 @@
+Thank you {{ order.full_name }}!
+
+Thank you for your purchase at Deilen, we're working hard to get your order to you as quickly as possible.
+Your order information is listed below, please consider this a confirmation of your order at Deilen.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Grand Total: £{{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }} within the next 48 hours.
+
+We have your phone number down as {{ order.phone_number }}. We may need to provide this number to third-party carriers to deliver your order. Otherwise, will only attempt to contact you on this number if there is a problem with your order.
+
+If you have any questions or concerns we will do our best to help you! Please contact us at {{ contact_email }}.
+
+
+Thank you again for your purchase!
+
+The Deilen Team.
