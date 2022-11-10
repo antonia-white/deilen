@@ -241,12 +241,23 @@ Final steps:
     - If you want to freeze your own packages into this file, run `pip3 freeze --local > requirements.txt` in the console.
     - To install only the packages that are already listed in the Deilen repo requirements (if making a local copy/clone) run `pip3 install -r requirements.txt` in the console.
 
-<!-- TODO: -->
+
 ### Setting up Stripe
 For instruction to set upstripe payments, please visit [the Stripe documentation](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
 Provided below is a brief explanation of Stripe setup:
 
-1. 
+1. Create a **stripe account** at [stripe.com](https://stripe.com/en-gb)
+2. In the terminal, install Stripe:
+```
+pip3 install stripe
+```
+3. In the project settings file, ensure `STRIPE_CURRENCY` is set to 'gbp' and `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` are retirived from the environment, with a default empty value, e.g.:
+```
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+```
+4. These API keys are avliable to you from the **home** page of your Stripe account, under a section titled **"for developers"**. Copy the **Publishable key** and assign it to a new Heroku config var called `STRIPE_PUBLIC_KEY`. Then do the same for the **Secret key**, assigning it to a config var called `STRIPE_SECRET_KEY`.
+
 
 ### Setting up AWS
 The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
