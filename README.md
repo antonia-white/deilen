@@ -243,7 +243,10 @@ Final steps:
 
 <!-- TODO: -->
 ### Setting up Stripe
-https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details
+For instruction to set upstripe payments, please visit [the Stripe documentation](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
+Provided below is a brief explanation of Stripe setup:
+
+1. 
 
 ### Setting up AWS
 The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
@@ -282,9 +285,9 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
 #### IAM
 
 1. Within IAM, in the sidebar select **User Groups** and then **Create group**, name the group.
-3. In **Policies**, **Create policy**.
-4. Navigate to the JSON tab and select **Import Managed Policy**, search for **S3** and select **AmazonS3FullAccess** followed by **Import**.
-5. Navigate back to your S3 bucket and copy the **ARN Number**. Return to **This Policy** and update the **Resource Key** including your ARN Number . Copy this line to include all files by adding /* at the end. This code section should look like the following:
+2. In **Policies**, **Create policy**.
+3. Navigate to the JSON tab and select **Import Managed Policy**, search for **S3** and select **AmazonS3FullAccess** followed by **Import**.
+4. Navigate back to your S3 bucket and copy the **ARN Number**. Return to **This Policy** and update the **Resource Key** including your ARN Number . Copy this line to include all files by adding /* at the end. This code section should look like the following:
 ```
 "Resource": [
     "YOUR-ARN-NUMBER-HERE",
@@ -292,12 +295,12 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
 ]
 ```
 
-6. Ensure the policy is named and has a description, then **Create Policy**.
-7. Within the group created earlier, under permissions click **Add Permission** and select **Attach Policies**.
-8. In the sidebar find **Users** and **Add User**.
-9. Provide a username and check **Programmatic Access**, then click 'Next'.
-10. Ensure the new policy is selected and navigate through until you click **Add User**.
-11. VERY IMPORTANT: Download the **CSV file**, this contains the user's AWS access key and AWS secret access key.
+5. Ensure the policy is named and has a description, then **Create Policy**.
+6. Within the group created earlier, under permissions click **Add Permission** and select **Attach Policies**.
+7. In the sidebar find **Users** and **Add User**.
+8. Provide a username and check **Programmatic Access**, then click 'Next'.
+9. Ensure the new policy is selected and navigate through until you click **Add User**.
+10. VERY IMPORTANT: Download the **CSV file**, this contains the user's AWS access key and AWS secret access key.
 
 
 #### Connecting AWS to Django
@@ -319,9 +322,9 @@ if 'USE_AWS' in os.environ:
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 ```
-5. Add  **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to Heroku config vars. These can be found in the CSV file downloaded when setting up AWS.
-6. Add **USE_AWS** to Heroku config vars with value set to 'True'.
-6. Remove the **DISABLE_COLLECTSTAIC** variable.
+4. Add  `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to Heroku config vars. These can be found in the CSV file downloaded when setting up AWS.
+5. Add `USE_AWS` to Heroku config vars with value set to 'True'.
+6. Remove the `DISABLE_COLLECTSTAIC` variable.
 7. Within your settings.py add: 
 
 ```
@@ -361,6 +364,25 @@ AWS_S3_OBJECT_PARAMETERS = {
 11. Under **Permissions** select the option **Grant public-read access** and click **Upload**.
 
 ### Gmail STMP Server Setup
+The following steps are for Gmail and may differ to other providers.
+
+1. Navigate to **settings**, access the **Accounts and Import** tab and scroll to **other Google account settings**.
+2. In the **security** tab and turn on **2-Step Verification**. Once completed access **App passwords**, select **Mail** for the app dropdown and select **Other** for the device type dropdown and type in "Django".
+3. A 16 character password will be generated, copy this and enter as a Heroku config variable named `EMAIL_HOST_PASS` alongside your email address for `EMAIL_HOST_USER` variable.
+4. In your project's settings.py file add the folloeing:
+```
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'deilen.example@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
 
 ### Cloning
 
