@@ -92,7 +92,8 @@ def add_plant(request):
         form = PlantForm(request.POST, request.FILES)
         if form.is_valid():
             plant = form.save()
-            messages.success(request, "Successfully added plant product!")
+            messages.success(
+                request, f"Successfully added plant product: {plant.name}!")
             return redirect(reverse("plant_detail", args=[plant.id]))
         else:
             messages.error(
@@ -123,7 +124,8 @@ def edit_plant(request, plant_id):
         form = PlantForm(request.POST, request.FILES, instance=plant)
         if form.is_valid():
             form.save()
-            messages.success(request, "Successfully updated plant product!")
+            messages.success(
+                request, f"Successfully updated plant product: {plant.name}!")
             return redirect(reverse("plant_detail", args=[plant.id]))
         else:
             messages.error(
@@ -142,3 +144,15 @@ def edit_plant(request, plant_id):
     }
 
     return render(request, template, context)
+
+
+def delete_plant(request, plant_id):
+    """Method to delete an exisiting store product"""
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, no access - admins only!")
+        return redirect(reverse("home"))
+
+    plant = get_object_or_404(Plant, pk=plant_id)
+    plant.delete()
+    messages.success(request, f"Successfully deleted plant product!")
+    return redirect(reverse('plants'))
