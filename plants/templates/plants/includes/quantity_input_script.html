@@ -41,4 +41,12 @@
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
     });
+
+    // force qty_input to only be 0-99
+    $(".qty_input").keyup(function() {
+        let inputVal = $(this).val();
+        if (inputVal < 0 || inputVal > 99 || inputVal.length > 2 || inputVal.length < 1) {
+            $(this).val("1");
+        }
+    });
 </script>
