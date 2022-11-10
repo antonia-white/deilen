@@ -110,3 +110,35 @@ def add_plant(request):
     }
 
     return render(request, template, context)
+
+
+def edit_plant(request, plant_id):
+    """Method to edit an exisiting store product"""
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, no access - admins only!")
+        return redirect(reverse("home"))
+
+    plant = get_object_or_404(Plant, pk=plant_id)
+    if request.method == "POST":
+        form = PlantForm(request.POST, request.FILES, instance=plant)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully updated plant product!")
+            return redirect(reverse("plant_detail", args=[plant.id]))
+        else:
+            messages.error(
+                request,
+                "Failed to update plant product. Please \
+                check the form and try again.",
+            )
+    else:
+        form = PlantForm(instance=plant)
+        messages.info(request, f"You are editing {plant.name}")
+
+    template = "plants/edit_plant.html"
+    context = {
+        "form": form,
+        "plant": plant,
+    }
+
+    return render(request, template, context)
