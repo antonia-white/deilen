@@ -4,7 +4,7 @@ This website is a full stack ecommerce store to allow people to buy house plants
 
 To visit the website, please visit the deployed site [here](https://deilen-shop.herokuapp.com/).
 
-![Responsive Mockup](documentation/testing/responsive-mockup.png)
+![Responsive Mockup](documentation/testing/deilen-amiresponsive.png)
 
 ***
 
@@ -203,6 +203,12 @@ To view all testing documentation, refer to [TESTING.md](TESTING.md).
 ***
 
 ## Deployment
+
+<!-- TODO: update -->
+<!-- Remove reference to mongodb and replace with postgres database -->
+<!-- Stripe setup -->
+<!-- AWS setup -->
+<!-- Gmail stuff -->
 
 The site was deployed to Heroku. The live link can be found [here](https://deilen-shop.herokuapp.com/)
 
