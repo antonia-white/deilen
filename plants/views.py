@@ -82,6 +82,7 @@ def plant_detail(request, plant_id):
     return render(request, "plants/plant_detail.html", context)
 
 
+@login_required
 def add_plant(request):
     """Add plant to the store"""
     if not request.user.is_superuser:
@@ -113,6 +114,7 @@ def add_plant(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_plant(request, plant_id):
     """Method to edit an exisiting store product"""
     if not request.user.is_superuser:
@@ -146,6 +148,7 @@ def edit_plant(request, plant_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_plant(request, plant_id):
     """Method to delete an exisiting store product"""
     if not request.user.is_superuser:
