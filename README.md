@@ -181,6 +181,7 @@ __Feature__
 - [Django](https://www.djangoproject.com/) used as the project's web framework
 - [Pip3](https://pip.pypa.io/en/stable/) was the package manager used to install the dependencies
 - [Bootstrap](https://getbootstrap.com/) was used for website layout and responsive components
+- [AWS S3 Buckets](https://aws.amazon.com/products/storage/?hp=tile&tile=solutions) was used to provide storage of static and media files for the deployed site.
 - [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
 - [Am I Responsive](http://ami.responsivedesign.is/) was used to generate a mock-up image
 - [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness
@@ -242,8 +243,122 @@ Final steps:
 
 <!-- TODO: -->
 ### Setting up Stripe
+https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details
 
 ### Setting up AWS
+The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
+
+1. Create an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email).
+2. Login and locate **S3 buckets** and create a new bucket.
+3. Underneath **Object Ownership** select **ACLs enabled**.
+4. Uncheck **Block Public Access** to make the bucket public, then finally **Create Bucket**.
+5. Inside your new bucket navigate to the **Properties** tab. Within **Static Website Hosting** click **Edit** and edit the Static website hosting to **Enabled**. Copy the default values for the index and error documents and click **Save Changes**.
+6. Navigate to the **Permissions** tab, within **Cross-origin Resource Sharing (CORS)**, click **Edit** and then paste in the following:
+
+  ```
+    [
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+            "AllowedMethods": [
+            "GET"
+            ],
+            "AllowedOrigins": [
+            "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+  ```
+
+7. In the **Bucket Policy** section click **Edit** and then **Policy Generator**. Open the **Select Type of Policy** dropdown, select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
+8. Open up **Actions** dropdown menu, now select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this in the policy generator in the **Amazon Resource Name (ARN)** field.
+9. **Add statement > Generate Policy** and copy the generated policy, paste this into the **Bucket Policy Editor**.
+10. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket. Save.
+11. Find **Access Control List (ACL)** and **Edit**.
+12. Next to **Everyone (public access)**, check the **list** checkbox and save your changes.
+
+#### IAM
+
+1. Within IAM, in the sidebar select **User Groups** and then **Create group**, name the group.
+3. In **Policies**, **Create policy**.
+4. Navigate to the JSON tab and select **Import Managed Policy**, search for **S3** and select **AmazonS3FullAccess** followed by **Import**.
+5. Navigate back to your S3 bucket and copy the **ARN Number**. Return to **This Policy** and update the **Resource Key** including your ARN Number . Copy this line to include all files by adding /* at the end. This code section should look like the following:
+```
+"Resource": [
+    "YOUR-ARN-NUMBER-HERE",
+    "YOUR-ARN-NUMBER-HERE/*"
+]
+```
+
+6. Ensure the policy is named and has a description, then **Create Policy**.
+7. Within the group created earlier, under permissions click **Add Permission** and select **Attach Policies**.
+8. In the sidebar find **Users** and **Add User**.
+9. Provide a username and check **Programmatic Access**, then click 'Next'.
+10. Ensure the new policy is selected and navigate through until you click **Add User**.
+11. VERY IMPORTANT: Download the **CSV file**, this contains the user's AWS access key and AWS secret access key.
+
+
+#### Connecting AWS to Django
+
+1. In the terminal:
+
+```
+  pip3 install boto3
+  pip3 install django-storages 
+```  
+
+2. Add **storages** to your installed apps within your settings.py file.
+3. In settings.py file add:
+
+```
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'your-bucket-name-here'
+    AWS_S3_REGION_NAME = 'your-region-here'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+```
+5. Add  **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to Heroku config vars. These can be found in the CSV file downloaded when setting up AWS.
+6. Add **USE_AWS** to Heroku config vars with value set to 'True'.
+6. Remove the **DISABLE_COLLECTSTAIC** variable.
+7. Within your settings.py add: 
+
+```
+  AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+8. Within the bucket config in settings.py, add:
+
+```
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+```
+
+9. In the root directory of your project create **custom_storages.py**. Include the following:
+
+```
+  from django.conf import settings
+  from storages.backends.s3boto3 import S3Boto3Storage
+
+  class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+  class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+10. Navigate back to you AWS S3 Bucket and **Create Folder** called **media**, you can then **Upload > Add Files** all media files needed for the site.
+11. Under **Permissions** select the option **Grant public-read access** and click **Upload**.
 
 ### Gmail STMP Server Setup
 
