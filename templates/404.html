@@ -1,19 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row push-content">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
 <div class="container-fluid bg-light">
     <!-- Image -->
     <div class="row main-container text-center">
-        <!-- TODO: check that this renders -->
+        <!-- TODO: resize this to have a max height -->
         <div id="image-container" class="col-12">
             <img class="img-fluid" src="{{ MEDIA_URL }}wasteland.jpg" alt="Wasteland">
         </div>

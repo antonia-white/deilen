@@ -2,14 +2,6 @@
 {% load static %}
 {% load bag_tools %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row push-content">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
     <div class="container mb-2">
         <div class="row">
@@ -109,27 +101,41 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'plants/includes/quantity_input_script.html' %}
+    {{ block.super }}
+    {% include 'plants/includes/quantity_input_script.html' %}
 
-<script>
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    });
+    <script>
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        // force qty_input to only be 0-99
+        $(".qty_input").keyup(function() {
+            let inputVal = $(this).val();
+            if (inputVal < 0 || inputVal > 99 || inputVal.length > 2) {
+                $(this).val("");
+            } else {
+                $(this).val(inputVal);
+            }
+        });
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    });
-</script>
+        // Update quantity on click
+        $(".update-link").click(function() {
+            let form = $(this).siblings("form.update-form");
+            let inputVal = parseInt($(form).find(".qty_input").val());
+            if (/^([0-9]|[1-9][0-9])$/.test(inputVal)) {
+                form.submit();
+            }
+        });
+
+        // Remove item and reload on click
+        $(".remove-item").click(function() {
+            let csrfToken = "{{ csrf_token }}";
+            let itemId = $(this).attr("id").split("remove_")[1];
+            let size = $(this).data("product_size");
+            let url = `/bag/remove/${itemId}/`;
+            let data = {"csrfmiddlewaretoken": csrfToken, "product_size": size};
+
+            $.post(url, data).done(function() {
+                location.reload();
+            });
+        });
+    </script>
 {% endblock %}

@@ -1,17 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-
-    <div class="container header-container">
-
-        <div class="row push-content">
-            <div class="col"></div>
-        </div>
-    </div>
-
-{% endblock %}
-
 {% block content %}
 
 <div class="container-fluid">
@@ -106,16 +95,34 @@
                             </span>
                             <span class="text-uppercase">Edit</span>
                         </a>
-                        <a href="{% url 'delete_plant' plant.id %}" class="btn btn-outline-danger rounded-1 mt-5">
+                        <a href="#" class="btn btn-outline-danger rounded-1 mt-5" data-bs-toggle="modal" data-bs-target="#deletePlantModal">
                             <span class="material-symbols-outlined">
                                 delete
                             </span>
                             <span class="text-uppercase">Delete</span>
                         </a>
+                        <aside class="modal fade" id="deletePlantModal" tabindex="-1" aria-labelledby="deletePlantModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="deletePlantModalLabel">Delete {{ plant.name }}</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete {{ plant.name }}?
+                                        <br>
+                                        <small class="text-muted">This cannot be undone.</small>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <a href="{% url 'delete_plant' plant.id %}" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
                     {% endif %}
 
                     <!-- Add to bag -->
-                    <!-- TODO: fix, user can currently select negative quantities  -->
                     <form class="form" action="{% url 'add_to_bag' plant.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
