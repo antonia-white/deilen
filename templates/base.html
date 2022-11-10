@@ -94,6 +94,12 @@
             <!-- Links -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item d-none d-lg-inline-block">
+                        <a href="{% url 'plants' %}" class="header-list-item nav-link">
+                            <i class="material-symbols-outlined">potted_plant</i>
+                            <p class="my-0">Plants</p>
+                        </a>
+                    </li>
                     <!-- Account -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
@@ -242,7 +248,7 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
+        <aside class="message-container">
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
@@ -256,17 +262,19 @@
                     {% endif %}
                 {% endwith %}
             {% endfor %}
-        </div>
+        </aside>
     {% endif %}
 
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <!-- Footer -->
-    <div class="container-fluid">
+    <footer class="container-fluid">
         <div class="row footer-background">
             <!-- Location -->
             <div class="col-xs-4 col-sm-4 col-md-3">
@@ -316,12 +324,12 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </footer>
 
     <!-- Modals -->
     <!-- Returns and Refunds -->
-    <div class="modal fade" id="retRefModal" tabindex="-1" aria-labelledby="retRefModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <aside class="modal fade" id="retRefModal" tabindex="-1" aria-labelledby="retRefModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="retRefModalLabel">Returns and Refunds</h1>
@@ -382,10 +390,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
     <!-- Delivery -->
-    <div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <aside class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="shippingModalLabel">Delivery and Shipping</h1>
@@ -437,10 +445,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
     <!-- FAQ -->
-    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <aside class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="faqModalLabel">FAQs</h1>
@@ -560,11 +568,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
     <!-- Terms and Conditions -->
     <!-- TODO: populate -->
-    <div class="modal fade" id="tcModal" tabindex="-1" aria-labelledby="tcModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <aside class="modal fade" id="tcModal" tabindex="-1" aria-labelledby="tcModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="tcModalLabel">Terms and Conditions</h1>
@@ -578,23 +586,23 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
 
 
-{% block postloadjs %}
-<script>
-    let toastElList = [].slice.call(document.querySelectorAll('.toast'))
-    let toastList = toastElList.map(function (toastEl) {
-        let option = {
-            animation: true,
-            autohide: true,
-            delay: 20000,
-        }
-        let bsToast = new bootstrap.Toast(toastEl, option)
-        bsToast.show();
-    })
-</script>
-{% endblock %}
+    {% block postloadjs %}
+    <script>
+        let toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        let toastList = toastElList.map(function (toastEl) {
+            let option = {
+                animation: true,
+                autohide: true,
+                delay: 20000,
+            };
+            let bsToast = new bootstrap.Toast(toastEl, option);
+            bsToast.show();
+        })
+    </script>
+    {% endblock %}
 
 </body>
 
