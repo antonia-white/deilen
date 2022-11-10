@@ -192,7 +192,7 @@ __Feature__
 - [HTML](https://en.wikipedia.org/wiki/HTML) was used as the markup language
 - [CSS](https://en.wikipedia.org/wiki/CSS) was used for custom styling
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
-- [Python](https://www.python.org/downloads/) was used as ...
+- [Python](https://www.python.org/downloads/) was used as TODO:
 
 ***
 
@@ -204,12 +204,6 @@ To view all testing documentation, refer to [TESTING.md](TESTING.md).
 
 ## Deployment
 
-<!-- TODO: update -->
-<!-- Remove reference to mongodb and replace with postgres database -->
-<!-- Stripe setup -->
-<!-- AWS setup -->
-<!-- Gmail stuff -->
-
 The site was deployed to Heroku. The live link can be found [here](https://deilen-shop.herokuapp.com/)
 
 The steps to deploy a Heroku app are as follows: 
@@ -219,13 +213,18 @@ The steps to deploy a Heroku app are as follows:
 4.  Create.
 5.  Navigate to the Resources tab and add a Heroku PostgreSQL database.
 6.  Access the Settings Tab and find the Config Vars. For this project you will need the following config vars:
-    *   MONGO_DBNAME = the name of your mongo database.
-    *   MONGO_URI = the uri for your mongo database.
     *   DATABASE_URL = the url of your heroku postgres database.
     *   SECRET_KEY = a secret key for your app.
     *   PORT = 5000
     *   DEBUG = set to 'True' during development and 'False' upon deployment.
-    *   IP = Your IP address
+    *   IP = Your IP address.
+    *   USE_AWS = set to 'True'.
+    *   AWS_ACCESS_KEY_ID = amazon web services publishable API key.
+    *   AWS_SECRET_ACCESS_KEY = amazon web services secret API key, must be stored securly.
+    *   STRIPE_PUBLIC_KEY = stripes publishable API key.
+    *   STRIPE_SECRET_KEY = stripes secret API key, must be stored securly.
+    *   EMAIL_HOST_PASS = 16 character password given once SMTP server setup in mail account settings.
+    *   EMAIL_HOST_USER = the active email address that site emails will be sent from.
 
   Please see this [official documentation](https://devcenter.heroku.com/articles/config-vars) on Heroku configuration for more details.
 
@@ -235,11 +234,18 @@ The steps to deploy a Heroku app are as follows:
 12. If you wish, enable Automatic Deploys for automatic deployment when you push updates to Github. Or alternatively, select the correct branch for deployment from the drop-down menu and click Deploy Branch for manual deployment.
 
 Final steps: 
-1. Create a Procfile in your repository containing `web: python run.py` so that Heroku will identify the app as a Python app.
+1. Create a Procfile in your repository containing `web: gunicorn deilen.wsgi:application` so that Heroku will identify that Gunicorn is acting as the webserver and run using the projects wsgi module.
 2. Create an untracked file called env.py in your repo and input the config vars you previously established in Heroku.
 3. Create a requirements.txt file
     - If you want to freeze your own packages into this file, run `pip3 freeze --local > requirements.txt` in the console.
     - To install only the packages that are already listed in the Deilen repo requirements (if making a local copy/clone) run `pip3 install -r requirements.txt` in the console.
+
+<!-- TODO: -->
+### Setting up Stripe
+
+### Setting up AWS
+
+### Gmail STMP Server Setup
 
 ### Cloning
 
