@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row push-content">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
 <div class="container-fluid bg-light">
     <br class="small-screen-hide">
@@ -34,14 +26,22 @@
     <!-- Why keep plants -->
     <div class="row main-container">
         <h2 class="text-center">Why keep plants?</h2>
-        <div class="col-sm-12 col-md-4 p-3">
-            <p class="text-center">Wellbeing</p>
+        <figure class="card col-12 col-md-3 p-3 border info-card">
+            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="" class="img-fluid info-card-img position-relative">
+            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-white">Wellbeing</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Blah blah text to display for wellbeing</p>
+        </figure>
+        <div id="wellbeing-card" class="col-sm-12 col-md-3 p-3 border info-card">
+            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="" class="img-fluid">
+            <h4 id="wellbeing-title" class= "text-center logo-font position-relative top-50 start-50 translate-middle">Wellbeing</h4>
         </div>
-        <div class="col-sm-12 col-md-4 p-3">
-            <p class="text-center">Air purifying</p>
+        <div id="air-card" class="col-sm-12 col-md-3 p-3 border info-card">
+            <img src="{{ MEDIA_URL }}air-img.jpg" alt="" class="img-fluid">
+            <h4 id="air-title" class="info-title text-center logo-font position-relative top-50 start-50 translate-middle">Air purifying</h4>
         </div>
-        <div class="col-sm-12 col-md-4 p-3">
-            <p class="text-center">Aesthetics</p>
+        <div id="aesthetics-card" class="col-sm-12 col-md-3 p-3 border info-card">
+            <img src="{{ MEDIA_URL }}aesthetics-img.jpg" alt="" class="img-fluid">
+            <h4 id="aesthetics-title" class="info-title text-center logo-font position-relative top-50 start-50 translate-middle">Aesthetics</h4>
         </div>
     </div>
     <hr>
@@ -53,10 +53,50 @@
     <!-- Register Account Section -->
     <div class="row">
         <div class="col-6 text-center">
-            <a href="">
+            <a href="{% url 'account_signup' %}">
                 <p class="btn btn-dark btn-lg pt-2">Register</p>
             </a>
         </div>
     </div>
 </div>
+
+<!-- TODO: optimise -->
+<script>
+    $(document).ready(function(){
+
+        // new example code
+        $(".info-card-text").hide();
+        $(".info-card").on("mouseover", function() {
+            $(this).children(".info-card-header").fadeToggle();
+            $(this).children(".info-card-text").fadeToggle();
+            $(this).children(".info-card-img").addClass("fade-bg");
+        });
+        $(".info-card").on("mouseout", function() {
+            $(this).children(".info-card-header").fadeIn();
+            $(this).children(".info-card-text").fadeOut();
+            $(this).children(".info-card-img").removeClass("fade-bg");
+        });
+        // end of new example code
+
+     $("#wellbeing-card").mouseover(function(){
+         $("#wellbeing-title").css("display", "none");
+     });
+     $("#wellbeing-card").mouseout(function(){
+         $("#wellbeing-title").css("display", "block");
+     });
+     $("#air-card").mouseover(function(){
+         $("#air-title").css("display", "none");
+     });
+     $("#air-card").mouseout(function(){
+         $("#air-title").css("display", "block");
+     });
+     $("#aesthetics-card").mouseover(function(){
+         $("#aesthetics-title").css("display", "none");
+     });
+     $("#aesthetics-card").mouseout(function(){
+         $("#aesthetics-title").css("display", "block");
+     });
+});
+</script>
+
 {% endblock %}
