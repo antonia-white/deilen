@@ -189,7 +189,7 @@
                                         <hr class="dropdown-divider">
                                     </li>
                                     {% for type in all_types %}
-                                    <li><a class="dropdown-item text-capitalize" href="{% url 'plants' %}?plant_type={{ type }}">{{ type }}</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{% url 'plants' %}?plant_type={{ type.name }}">{{ type }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
