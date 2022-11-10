@@ -22,14 +22,24 @@
 
 /* General */
 
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Work Sans', sans-serif;
     background-color: #fcffff;
     height: calc(100vh - 164px);
+}
+
+main {
+    padding-top: 8em;
+}
+
+/* Force the footer to bottom of page */
+html, body {
+    height: 100%;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
 }
 
 #offers-block {
@@ -177,7 +187,21 @@ footer {
 #image-container .btn:hover {
     background-color: #465c6990;
     color: #fcffff;
-  }
+}
+
+figure.info-card {
+    height: 250px;
+}
+
+.info-card-img {
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-card-img:hover {
+    background-color: black;
+    opacity: 0.5;
+}
 
 /* Plants page */
 
@@ -253,9 +277,6 @@ div.navbar {
     .small-screen-hide {
         display: none;
     }
-    .push-content{ 
-        height: 80px;
-    }
     #offers-block {
         padding-top:1.5em;
     }
@@ -278,5 +299,11 @@ div.navbar {
 @media(min-width:992px) {
     .large-screen-hide {
         display: none;
+    }
+}
+
+@media(min-width:337px) {
+    main {
+        padding-top: 4.5em;
     }
 }
