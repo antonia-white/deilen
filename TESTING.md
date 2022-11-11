@@ -197,7 +197,30 @@ I used the built-in [GitHub Issues](https://github.com/antonia-white/deilen/issu
 
 Here are the issues tracked that have been closed and working as intended:
 
-- Name of Bug [#1](https://github.com/antonia-white/deilen/issues/1)
+- DEFAULT_AUTO_FIELD warnings when making migrations [#1](https://github.com/antonia-white/deilen/issues/1)
+- Media Folder Not Found [#2](https://github.com/antonia-white/deilen/issues/2)
+- CountryField is not defined [#3](https://github.com/antonia-white/deilen/issues/3)
+- Manager isn't accessible via PlantDifficulty instances [#4](https://github.com/antonia-white/deilen/issues/4)
+- database connection isn't set to UTC [#5](https://github.com/antonia-white/deilen/issues/5)
+- Failed to push some refs to 'https://git.heroku.com/deilen-shop.git' [#6](https://github.com/antonia-white/deilen/issues/6)
+- Error while running '$ python manage.py collectstatic --noinput' [#7](https://github.com/antonia-white/deilen/issues/7)
+- No module named 'custom_storages' [#8](https://github.com/antonia-white/deilen/issues/8)
+- SuspiciousOperation at / Attempted access to '/favicon/favicon.ico' denied [#9](https://github.com/antonia-white/deilen/issues/9)
+- Heroku: Your account has reached its concurrent builds limit. [#10](https://github.com/antonia-white/deilen/issues/10)
+- Forbidden (403) CSRF verification failed. Request aborted [#11](https://github.com/antonia-white/deilen/issues/11)
+- NameError at /checkout/ name 'product' is not defined [#12](https://github.com/antonia-white/deilen/issues/12)
+- NameError at /profile/ name 'order is not defined [#13](https://github.com/antonia-white/deilen/issues/13)
+- toast is not a function [#14](https://github.com/antonia-white/deilen/issues/14)
+- NameError at /checkout_success name 'UserProfile' is not defined [#15](https://github.com/antonia-white/deilen/issues/15)
+- TemplateDoesNotExist at /checkout/checkout_success/ [#16](https://github.com/antonia-white/deilen/issues/16)
+- NameError at /contact/contact_success name 'contact' is not defined [#17](https://github.com/antonia-white/deilen/issues/17)
+- Manager isn't accessible via %s instances" % cls.__name_ [#18](https://github.com/antonia-white/deilen/issues/18)
+- TypeError at /plants/add/ 'str' object is not callable [#19](https://github.com/antonia-white/deilen/issues/19)
+- SMTPSenderRefused at /accounts/login/ (530, b'5.7.0 Authentication Required.) [#20](https://github.com/antonia-white/deilen/issues/20)
+- Validator error in base.html [#21](https://github.com/antonia-white/deilen/issues/21)
+- AuthenticationError at /checkout/ [#22](https://github.com/antonia-white/deilen/issues/22)
+- SMTPRecipientsRefused at /checkout/checkout_success [#23](https://github.com/antonia-white/deilen/issues/23)
+- ValueError at /bag/add/3/ invalid literal for int() with base 10: [#24](https://github.com/antonia-white/deilen/issues/24)
 
 ***
 
