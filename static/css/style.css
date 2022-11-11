@@ -209,6 +209,10 @@ img.card-img-top {
     border-radius: 0;
 }
 
+.unstyled-link a{
+    text-decoration: none;
+}
+
 /* Filtering navbar */
 div.navbar {
     margin: 0 auto;

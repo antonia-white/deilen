@@ -46,15 +46,17 @@
                                 </div>
                             </a>
                             {% endif %}
-                            <a href="{% url 'plant_detail' plant.id %}">
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ plant.name }}</p>
-                                </div>
-                            </a>
+                            <div class="unstyled-link">
+                                <a href="{% url 'plant_detail' plant.id %}">
+                                    <div class="card-body pb-0">
+                                        <p class="text-dark mb-0 unstyled">{{ plant.name }}</p>
+                                    </div>
+                                </a>
+                            </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">£{{ plant.price }}</p>
+                                        <p class="lead mb-0 text-left">£{{ plant.price }}</p>
                                         <!-- Type -->
                                         {% if plant.plant_type %}
                                             <p class="small mt-1 mb-0">
