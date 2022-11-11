@@ -4,8 +4,7 @@
 
 - HTML
   - No errors were found in the `example.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/#validate_by_input).
-
-    >![example.html](documentation/testing/html-validator-example.png)
+    [example.html](documentation/testing/html-validator-example.png)
 
 
 - CSS
@@ -21,10 +20,138 @@
 
 
 - Python
-  - No errors were returned and all code met PEP8 compliance when `example.py` file was passed through the official [pep8online](http://pep8online.com/) Python validator.
 
-    >![example.py](documentation/testing/pep8online-py-example.py-validator-screenshot.png)
+  - No errors were returned and all code met PEP8 compliance when `bag/contexts.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/bag/contexts.py).
 
+    [Screenshot of bag/contexts.py validation](documentation/testing/pep8online-py-bag-contexts.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `bag/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/bag/urls.py).
+
+    [Screenshot of bag/urls.py validation](documentation/testing/pep8online-py-bag-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `bag/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/bag/models.py).
+
+    [Screenshot of bag/models.py validation](documentation/testing/pep8online-py-bag-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `bag/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/bag/views.py).
+
+    [Screenshot of bag/views.py validation](documentation/testing/pep8online-py-bag-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/views.py).
+
+    [Screenshot of checkout/views.py validation](documentation/testing/pep8online-py-checkout-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/urls.py).
+
+    [Screenshot of checkout/urls.py validation](documentation/testing/pep8online-py-checkout-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/signals.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/signals.py).
+
+    [Screenshot of checkout/signals.py validation](documentation/testing/pep8online-py-checkout-signals.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/models.py).
+
+    [Screenshot of checkout/models.py validation](documentation/testing/pep8online-py-checkout-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/forms.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/forms.py).
+
+    [Screenshot of checkout/forms.py validation](documentation/testing/pep8online-py-checkout-forms.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `checkout/apps.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/checkout/apps.py).
+
+    [Screenshot of checkout/apps.py validation](documentation/testing/pep8online-py-checkout-apps.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `contact/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/contact/views.py).
+
+    [Screenshot of contact/views.py validation](documentation/testing/pep8online-py-contact-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `contact/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/contact/urls.py).
+
+    [Screenshot of contact/urls.py validation](documentation/testing/pep8online-py-contact-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `contact/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/contact/models.py).
+
+    [Screenshot of contact/models.py validation](documentation/testing/pep8online-py-contact-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `contact/forms.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/contact/forms.py).
+
+    [Screenshot of contact/forms.py validation](documentation/testing/pep8online-py-contact-forms.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `contact/admin.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/contact/admin.py).
+
+    [Screenshot of contact/admin.py validation](documentation/testing/pep8online-py-contact-admin.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `deilen/settings.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/deilen/settings.py).
+
+    [Screenshot of deilen/settings.py validation](documentation/testing/pep8online-py-deilen-settings.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `deilen/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/deilen/urls.py).
+
+    [Screenshot of deilen/urls.py validation](documentation/testing/pep8online-py-deilen-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `home/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/home/views.py).
+
+    [Screenshot of home/views.py validation](documentation/testing/pep8online-py-home-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `home/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/home/urls.py).
+
+    [Screenshot of home/urls.py validation](documentation/testing/pep8online-py-home-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `home/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/home/models.py).
+
+    [Screenshot of home/models.py validation](documentation/testing/pep8online-py-home-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `home/admin.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/home/admin.py).
+
+    [Screenshot of home/admin.py validation](documentation/testing/pep8online-py-home-admin.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/views.py).
+
+    [Screenshot of plants/views.py validation](documentation/testing/pep8online-py-plants-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/urls.py).
+
+    [Screenshot of plants/urls.py validation](documentation/testing/pep8online-py-plants-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/models.py).
+
+    [Screenshot of plants/models.py validation](documentation/testing/pep8online-py-plants-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/forms.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/forms.py).
+
+    [Screenshot of plants/forms.py validation](documentation/testing/pep8online-py-plants-forms.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/custom_context_processor.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/custom_context_processor.py).
+
+    [Screenshot of plants/custom_context_processor.py validation](documentation/testing/pep8online-py-plants-custom_context_processor.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `plants/admin.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/plants/admin.py).
+
+    [Screenshot of plants/admin.py validation](documentation/testing/pep8online-py-plants-admin.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `profiles/views.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/profiles/views.py).
+
+    [Screenshot of profiles/views.py validation](documentation/testing/pep8online-py-profiles-views.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `profiles/urls.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/profiles/urls.py).
+
+    [Screenshot of profiles/urls.py validation](documentation/testing/pep8online-py-profiles-urls.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `profiles/models.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/profiles/models.py).
+
+    [Screenshot of profiles/models.py validation](documentation/testing/pep8online-py-profiles-models.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `profiles/forms.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/profiles/forms.py).
+
+    [Screenshot of profiles/forms.py validation](documentation/testing/pep8online-py-profiles-forms.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `profiles/admin.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/profiles/admin.py).
+
+    [Screenshot of profiles/admin.py validation](documentation/testing/pep8online-py-profiles-admin.py-validator-screenshot.png)
+
+  - No errors were returned and all code met PEP8 compliance when `manage.py` file was passed through Code Institute's Python Linter [pep8ish](https://pep8ish.herokuapp.com/). Please find a link to this file in the validator [here](https://pep8ish.herokuapp.com/https://raw.githubusercontent.com/antonia-white/deilen/main/manage.py).
+
+    [Screenshot of manage.py validation](documentation/testing/pep8online-py-manage.py-validator-screenshot.png)
 
 ***
 
