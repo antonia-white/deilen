@@ -317,6 +317,15 @@ A target user of the Deilen website will want to:
    >The site uses Stripe Payments to acheive safe and secure transactions. More can be read about this at [Stripe.com](https://stripe.com/en-gb).
    >![Strip payment](documentation/testing/payment.png)
 
+- [x] Recieve order confirmation
+   >Once an order has been made, the user will be shown the checkout success page which informs the user that their order has been processed. Email confirmation will also be sent to the user. Additionally, if a user has a profile they will be able to see processed order in their order history on their profile.
+   >![Order confirmation page](documentation/testing/order-confirmation-page.png)
+   >![Order confirmation email](documentation/testing/order-confirmation-email.png)
+
+- [x] Contact Deilen
+   >Store users will nee to be able to contact Deilen if they have any questions or need help with their order. The website has multiple useful links in the footer which outline compnay policy on returns and refunds, delivery and shipping, terms and condidtions, and provacy policy as well as an FAQs section. These links are full of customer information they may wish to ead before making a purchase. If store users have any other queires or concerns, there is a contact us section where a form is submitted with a customer message.
+   >![Contact form](documentation/testing/contact-form.png)
+
 - [x] Manage their account
    >Users are able to login, logout, register, confirm their email addresses, and reset their password. All of this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
 
@@ -346,7 +355,12 @@ A admin of the Deilen website will want to:
 ***
 
 ## Defensive Programming Testing
-- Describe what the defensive programming does. As seen:
+
+- Code implemented on all admin features to require user login and to verify that the logged in user has admin status. If a user is not logged in or is not an admin, they will be redirected and unable to perform admin privileges. This works even when trying to brute force a url.
+  `@login_required` on admin views to require user to be logged in. The following code was user to verify admin status:
   ```
-  add the code snippet used here
+  if not request.user.is_superuser:
+        messages.error(request, "Sorry, no access - admins only!")
+        return redirect(reverse("home"))
   ```
+  If the user is a superuser i.e., admin, then they will not be redirected and will have access to admin functionality. This functionality was manually tested and deemed to be functioning correctly.
