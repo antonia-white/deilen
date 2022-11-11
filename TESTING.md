@@ -258,7 +258,7 @@ To the best of my knowledge, there are no unfixed-bugs.
 
 - Website viewed on a laptop device:
 
-  >![Laptop view](documentation/testing/laptop-deployment-screenshot.png)
+  >![Laptop view](documentation/testing/firefox-screenshot.png)
 
 
 ***
