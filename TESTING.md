@@ -1,16 +1,47 @@
 # Testing 
 
 ## Validator Testing 
-TODO:
 - HTML
-  - No errors were found in the `example.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/#validate_by_input).
-    [example.html](documentation/testing/html-validator-example.png)
+  - No errors were found in the `home app` when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/).
+    
+    [Screenshot of index.html validation](documentation/testing/w3-index.html.png)
 
+  - No errors were found in the `signup.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/accounts/signup/).
+    
+    [Screenshot of signup.html validation](documentation/testing/w3-signup.html.png)
+
+  - No errors were found in the `login.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/accounts/login/).
+    
+    [Screenshot of login.html validation](documentation/testing/w3-login.html.png)
+
+  - No errors were found in the `bag app` when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/bag/).
+    
+    [Screenshot of bag validation](documentation/testing/w3-bag.html.png)
+
+  - No errors were found in the `plants app` when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/plants/).
+    
+    [Screenshot of plants validation](documentation/testing/w3-plants.html.png)
+
+  - No errors were found in the `plants app` when filtering results by plant type. This was passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/plants/?plant_type=flowering).
+    
+    [Screenshot of searching by type validation](documentation/testing/w3-plants-searching-type.html.png)
+
+  - No errors were found in the `plants app` when filtering results by care difficulty. This was passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/plants/?plant_difficulty=hard).
+    
+    [Screenshot of flitering by difficulty validation](documentation/testing/w3-plant-searching-difficulty.html.png)
+
+  - No errors were found in the `contact app` when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/contact/).
+    
+    [Screenshot of contact validation](documentation/testing/w3-contact.html.png)
+
+  - No errors were found in the `plant_details.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/nu/?doc=https://deilen-shop.herokuapp.com/plants/1/).
+    
+    [Screenshot of plant details validation](documentation/testing/w3-plant_details.html.png)
 
 - CSS
   - No personal errors were found in any CSS files throughout the site when passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdeilen-shop.herokuapp.com) CSS validator. All errors found were related to Bootstrap documentation and not from my custom CSS files.
   
-    >![deilen css validation](documentation/testing/jigsaw-css-validator-screenshot.png)
+    >![Deilen css validation](documentation/testing/jigsaw-css-validator-screenshot.png)
 
 TODO:
 - JavaScript
