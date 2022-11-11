@@ -38,9 +38,14 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
      - A user should be able to checkout securely and pay for their order, finalising the transaction and confirming delivery address.
      - Site users should be able to checkout and purchase products regardless of if they have a Deilen account or not.
   6. Profiles
-    - 
+      - Site users should be able to create a profile to store their default delivery address, which will auto-populate the checkout view. 
+      - Site users should also be able to view their previous order history.
+      - Profile users should be able to signin, signout, view their profile and ammend their default delivery information. 
   8.  Site Admin
-    - 
+      - Site admins should have secure access to product manipulation.
+      - Admins will be able to add new products.
+      - Admins will be able to edit existing products.
+      - Admins will be able to delete products from the store.
 
 ***
 
@@ -59,6 +64,7 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   - the typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
   - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). Which was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
 - Accessibility
+  The website was designed with accessibility in mind, 
   <!-- TODO: I removed altering font size on hover after consultation as it causes vertical displacement -->
 
 ***
