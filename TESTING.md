@@ -1,18 +1,18 @@
 # Testing 
 
 ## Validator Testing 
-
+TODO:
 - HTML
   - No errors were found in the `example.html` file when passed through the official [W3C's HTML Validator](https://validator.w3.org/#validate_by_input).
     [example.html](documentation/testing/html-validator-example.png)
 
 
 - CSS
-  - No errors were found in the `style.css` file when passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/#validate_by_input) CSS validator.
+  - No personal errors were found in any CSS files throughout the site when passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdeilen-shop.herokuapp.com) CSS validator. All errors found were related to Bootstrap documentation and not from my custom CSS files.
   
-    >![style.css](documentation/testing/jigsaw-css-validator-screenshot.png)
+    >![deilen css validation](documentation/testing/jigsaw-css-validator-screenshot.png)
 
-
+TODO:
 - JavaScript
   - No errors were found when `script.js` was passed through the official [JSHint](https://jshint.com/) JavaScript validator.
 
