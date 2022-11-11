@@ -266,9 +266,82 @@ To the best of my knowledge, there are no unfixed-bugs.
 ## User Story Testing
 
 A target user of the Deilen website will want to:
-- [x] Put user story here
-   >Put how the website meets this here
-   >![Can also add a picture](documentation/testing/example.png)
+
+- [x] Register an account
+   >Users can register an account at Deilen, the backend of this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
+   >![Register](documentation/testing/register.png)
+
+- [x] Store personal default delivery information
+   >Profile owners can store their default delivery information - making checkout easier as the delivery section of the order form auto-populates.
+
+- [x] Amend profile information
+   >Default delivery information can be updated.
+   >![Update profile](documentation/testing/update-profile.png)
+
+- [x] View past orders
+   >Profile owners will be able to view their previous order history.
+   >![Order history](documentation/testing/order-history.png)
+
+- [x] Reset their profile password
+   >Profile owners will be able to reset their password via email-authentication, this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/
+   >![Reset password](documentation/testing/password-reset.png)
+
+- [x] Navigate the site
+   >The navbar and footer make it easy for users to navigate the site as well as useful buttons and internal links throughout the website. The site is simple to navigate regardless of device type.
+   >![Main navbar](documentation/testing/main-nav.png)
+   >![Mobile navbar](documentation/testing/mobile-offcanvas-nav.png)
+
+- [x] View Deilen products
+   >All Deilen products can be viewed on the shop floor.
+   >![Shop floor](documentation/testing/shop-floor.png)
+
+- [x] Filter Deilen products
+   >Products can be filtered by plant type, care difficulties, price and alphabetically. Users are aslo albe to search specific keywords in the search bar.
+   >![Filter all plants](documentation/testing/filter-all.png)
+   >![Filter by plant type](documentation/testing/filter-type.png)
+   >![Filter by care difficulty](documentation/testing/filter-difficulty.png)
+
+- [x] Purchase Deilen products
+   >Users can purchase products by adding the desired quantities to their wheelbarrow (shopping bag) and continuing with checkout to pay and finalise their order.
+   >![Add product to bag](documentation/testing/product-detail.png)
+
+- [x] Ammend their order
+   >In the wheelbarrow (shopping bag) users will be giver an overview of their proposed purchase. Users can then ammend quantities of an item, remove items competley and continue shopping if they desire. At checkout, users will again be given an overview of their bag and prompted again to ammend their order if neccessary.
+   >![Ammend order](documentation/testing/order-summary.png)
+
+- [x] See an order summary with all cost details
+   >An order summary is listed in the wheelbarrow and again at checkout showing all costs and total cost of the purchase. There are no hidden costs. The amount that a user will be charged is clearly displayed before purchase.
+   >![Order summary](documentation/testing/order-summary.png)
+
+- [x] Checkout safley and securley
+   >The site uses Stripe Payments to acheive safe and secure transactions. More can be read about this at [Stripe.com](https://stripe.com/en-gb).
+   >![Strip payment](documentation/testing/payment.png)
+
+- [x] Manage their account
+   >Users are able to login, logout, register, confirm their email addresses, and reset their password. All of this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
+
+A admin of the Deilen website will want to:
+
+- [x] Have secure access to product manipulation
+   >Login is required to access any urls regarding product management. If the user logged in is not identified as an admin of the site, they will be redirected and thrown an error. Only admins have access to admin priviledges.
+   >![Admin defensive programming](documentation/testing/admin-security.png)
+
+- [x] Add new products
+   >Admins can easily add new products by navigating to the product management section under their account. Completing and submitting the form will result in a new product being displayed on the site.
+   >![Product management navigation](documentation/testing/product-management-nav.png)
+   >![Add product](documentation/testing/add.png)
+
+- [x] Edit existing products
+   >From a products details page, an admin can easily update the details of said product.
+   >![Admin controls](documentation/testing/admin-update-delete.png)
+
+- [x] Delete products
+   >From a products details page, an admin can easily delete said product. Before deletion a modal is triggered to ensure no accidental deletion.
+   >![Delete modal](documentation/testing/delete.png)
+
+- [x] View all orders, products, product categories, and customer messages
+   >All of this information can be viewed when an admin logs into the customised django admin. Django provides a built in admin interface which acts as a internal management tool. More information can be read about Django admin [here](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/). Deilen's django admin can be accessed [here](https://deilen-shop.herokuapp.com/admin/) (please note, admin login is required). 
+   >![Django admin screenshot](documentation/testing/django-admin.png)
 
 ***
 
