@@ -274,6 +274,11 @@ div.navbar {
 	color: #17a2b8; /* text-info */
 }
 
+/* Error handling */
+.large-error-img {
+    max-height: 600px;
+}
+
 /* Media Queries */
 
 /* Small screens and smaller bootstrap 5 */
