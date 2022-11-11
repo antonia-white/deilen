@@ -43,11 +43,15 @@
   
     >![Deilen css validation](documentation/testing/jigsaw-css-validator-screenshot.png)
 
-TODO:
-- JavaScript
-  - No errors were found when `script.js` was passed through the official [JSHint](https://jshint.com/) JavaScript validator.
 
-    >![script.js](documentation/testing/jshint-js-validator-screenshot.png)
+- JavaScript
+  - No errors were found when `countryfield.js` was passed through the official [JSHint](https://jshint.com/) JavaScript validator.
+
+    >![script.js](documentation/testing/jshint-countryfield.js-screenshot.png)
+
+  - No errors were found when `stripe_elements.js` was passed through the official [JSHint](https://jshint.com/) JavaScript validator.
+
+    >![script.js](documentation/testing/jshint-stripe_elements.js-screenshot.png)
 
 
 - Python
