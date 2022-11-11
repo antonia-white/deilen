@@ -158,17 +158,18 @@ __Feature__
  - This has not yet been done due to time constraints, so [Bootstrap's spinners](https://getbootstrap.com/docs/5.2/components/spinners/#about) have been used as an interim. 
  - In the future, I will work to replace the Bootstrap spinner with either this [potted-plant](https://icons8.com/icon/OKMC0MrrQY5I/potted-plant) or [plant in sunshine](https://icons8.com/icon/YW744aCDWOMe/plant) preloader.
 
-- Add google pay / paypal for easier checkout.
+- Add digital wallets for easier checkout.
+  - This would make checkout simpler and faster for the user by paying with the click of a button rather than filling out their card details into the Stripe input.
+  - However, Stripe's documentation warns that the integration of digital wallets are "currently only available in the U.S., and not yet available in the UK and euro area." Therefore, this would need to change or I would need to change online payment provider before this could be implemented.
+  - Please see the [Stripe Docs](https://stripe.com/docs/issuing/cards/digital-wallets) explaining how digital wallets can be intergrated into Stripe in the US.
 
 - Auto populate countries field with the value 'United Kingdom' as Deilen are currently unable to ship abroad.
-  - https://pypi.org/project/django-countries/#show-certain-countries-first
-  - https://stackoverflow.com/questions/44025372/setting-a-default-value-in-choicfield-in-django
+  - This would be useful to prevent users having to needlessly scroll through the country input to select the UK - as this is currentlythe only shipping destination.
+  - I intend to implement this feature by following this [documentation](https://pypi.org/project/django-countries/#show-certain-countries-first) and discourse on [this stackoverflow thread](https://stackoverflow.com/questions/44025372/setting-a-default-value-in-choicfield-in-django).
 
-- Webhooks
-
-- Describe the feature
-  - Why hasn't it yet been implemented and what steps would you take to start implementing this feature.
-
+- Checkout Webhooks
+  - Adds redundancy to the order payment incase the browser is closed after the payment is confirmaed but before the order form has been submitted. This would stop the chance of payment going through without the order having been created.
+  - I would follow the [Stripe documentation](https://stripe.com/docs/webhooks) on webhooks and follow Code Institute's walkthrough project in order to implement webhooks in my site.
 
 ***
 
@@ -182,18 +183,21 @@ __Feature__
 - [Pip3](https://pip.pypa.io/en/stable/) was the package manager used to install the dependencies
 - [Bootstrap](https://getbootstrap.com/) was used for website layout and responsive components
 - [AWS S3 Buckets](https://aws.amazon.com/products/storage/?hp=tile&tile=solutions) was used to provide storage of static and media files for the deployed site.
+- [Gmail](https://mail.google.com/mail) was used for an STMP server to send company emails
+- [PostgreSQL](https://www.postgresql.org/) was used as the projects database management system 
 - [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
 - [Am I Responsive](http://ami.responsivedesign.is/) was used to generate a mock-up image
 - [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness
 - [Wireframe.cc](https://wireframe.cc/pro/) was used for creating wireframes
 - [DrawSQL](https://drawsql.app/) was used for creating the database schema
 - [W3C HTML Validator](https://validator.w3.org/#validate_by_input+with_options) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) were used to check HTML and CSS files for errors
+- [pep8ish](https://pep8ish.herokuapp.com/) is Code Institute's Python Linter and was used to check Python files for errors
 
 ### Languages
 - [HTML](https://en.wikipedia.org/wiki/HTML) was used as the markup language
 - [CSS](https://en.wikipedia.org/wiki/CSS) was used for custom styling
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for custom website interactivity
-- [Python](https://www.python.org/downloads/) was used as TODO:
+- [Python](https://www.python.org/downloads/) was used for the backend functionality of the site
 
 ***
 
@@ -429,7 +433,7 @@ To fork this project go to the top left of the repository, where you see the For
 
 - Icons were taken from both [Google Font Icons](https://fonts.google.com/icons) and [FontAwesome](https://fontawesome.com/).
 - The favicon was generated with [favicon.io](https://favicon.io/) using Twitter emojis.
-- The homepage picture was taken from the open source site [Unsplash](https://unsplash.com/).
+- The all site images were taken from the open source site [Unsplash](https://unsplash.com/).
 - The product images were taken from [Kaggle](https://www.kaggle.com/), a website for dataset downloads. Specifically, images were taken from the [Healthy and Wilted Houseplant Images](https://www.kaggle.com/datasets/russellchan/healthy-and-wilted-houseplant-images) dataset. Only healthy houseplant images were used as product images.
 
 ### Acknowledgements
