@@ -154,7 +154,7 @@ __Navigation Bar__
   ![Checkout](documentation/testing/checkout.png)
 
   __Order Confirmation__
-  - One payment has been processed and an order created, a user will be directed to an order confimation page listing their order details and a button to redirect back to the store. Additionally, there will be a toast alerting the user of their order success and a confirmation email will be sent to the email adress the customer provided.
+  - One payment has been processed and an order created, a user will be directed to an order confirmation page listing their order details and a button to redirect back to the store. Additionally, there will be a toast alerting the user of their order success and a confirmation email will be sent to the email adress the customer provided.
   ![Order confirmation page](documentation/testing/order-confirmation-page.png)
   ![Order confirmation email](documentation/testing/order-confirmation-email.png)
 
@@ -181,7 +181,7 @@ __Profile__
 Only admins have access to product management and only admins can view all orders, products, product categories, and customer messages. Please see [TESTING.md](TESTING.md)'s defensive programming section to see how I prevented general site users from accessing admin features.
 
 __Adding Plants__
-  - An admin has the ability to add new products by navigating to the product management section under their account, which of course requires an admin signin. Completing and submitting the add plant form will result in a new product being displayed on the site. This will create a permenant object in the database which will remain until updated or deleted. Users will now be able to purchase this product.
+  - An admin has the ability to add new products by navigating to the product management section under their account, which of course requires an admin signin. Completing and submitting the add plant form will result in a new product being displayed on the site. This will create a permanent object in the database which will remain until updated or deleted. Users will now be able to purchase this product.
 
   ![Product management navigation](documentation/testing/product-management-nav.png)
   ![Add product](documentation/testing/add.png)
@@ -203,7 +203,7 @@ __Deleting Plants__
 
 __Django Admin__
 
-  -All site information can be viewed when an admin logs into the customised django admin. This includes full orders, customer messages and ability to manage plant categories and products. Django provides a built in admin interface which acts as a internal management tool. More information can be read about Django admin [here](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/). Deilen's django admin can be accessed [here](https://deilen-shop.herokuapp.com/admin/) (please note, admin login is required). 
+  - All site information can be viewed when an admin logs into the customised django admin. This includes full orders, customer messages and ability to manage plant categories and products. Django provides a built in admin interface which acts as a internal management tool. More information can be read about Django admin [here](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/). Deilen's django admin can be accessed [here](https://deilen-shop.herokuapp.com/admin/) (please note, admin login is required). 
   
   ![Django admin screenshot](documentation/testing/django-admin.png)
 
