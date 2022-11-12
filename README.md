@@ -105,8 +105,6 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
 
 ### Existing Features 
 
-<!-- TODO: -->
-
 __Navigation Bar__
   - Allows the user to navigate around the Deilen site. The Deilen logo will direct the user to the homepage, there's an Account Management button with dropdown options relating to profile creation and login, there's a Plants button for easy access to the shop floor, and there's a button to take a user to their Shopping Cart or "wheelbarrow". The wheelbarrows icon changes to blue if there are items currently sitting in the bag.
   - The search bar allows users to search for a keyterm throughout the site, this is useful if the user has a particular product in mind to purchase.
@@ -177,16 +175,37 @@ __Profile__
   ![Order summary](documentation/testing/order-summary.png) 
   ![Update profile](documentation/testing/update-profile.png) 
 
+
 ### Admin Features
 
-Description of what admins have control over
+Only admins have access to product manipulation and only admins can view all orders, products, product categories, and customer messages. Please see [TESTING.md](TESTING.md)'s defensive programming section to see how I prevented general site users from accessing admin features.
 
-__Admin Product Manipulation__
+__Adding Plants__
+  - An admin has the ability to add new products by navigating to the product management section under their account, which of course requires an admin signin. Completing and submitting the add plant form will result in a new product being displayed on the site. This will create a permenant object in the database which will remain until updated or deleted. Users will now be able to purchase this product.
 
-  - Describe the feature and what it allows a admin to do.
-  - Does the feature have any defensive programming?
+  ![Product management navigation](documentation/testing/product-management-nav.png)
+  ![Add product](documentation/testing/add.png)
 
-  ![Picture of feature](documentation/testing/example.png)
+__Editing Plants__
+  - From a plant's details page, an admin can easily update the details of said product. Clicking update opens a form, once completed and saved the data on this plant will be updated in the database.
+  - These admin control buttons (update and delete) are only present if the user that is logged in is a superuser i.e., an admin account.
+
+  ![Admin controls](documentation/testing/admin-update-delete.png)
+  ![Update form](documentation/testing/update-form.png)
+
+__Deleting Plants__
+
+  - From a plant's details page, an admin can easily delete said product. Before deletion a modal is triggered to ensure no accidental deletion.
+  - Once deleted this plant product will be permenantly deleted from the database.
+  - Admin control buttons (update and delete) are only present if the user that is logged in is a superuser i.e., an admin account.
+
+  ![Delete modal](documentation/testing/delete.png)
+
+__Django Admin__
+
+  -All site information can be viewed when an admin logs into the customised django admin. This includes full orders, customer messages and ability to manage plant categories and products. Django provides a built in admin interface which acts as a internal management tool. More information can be read about Django admin [here](https://docs.djangoproject.com/en/4.1/ref/contrib/admin/). Deilen's django admin can be accessed [here](https://deilen-shop.herokuapp.com/admin/) (please note, admin login is required). 
+  
+  ![Django admin screenshot](documentation/testing/django-admin.png)
 
 <!-- TODO: how to make an admin -->
 
