@@ -226,8 +226,9 @@ Here are the issues tracked that have been closed and working as intended:
 ***
 
 ## Unfixed Bugs 
+- There is currently nothing to validate a phone number input, the value provided can be any string. This can result in fake or incorrect phone numbers being inputted.
 
-To the best of my knowledge, there are no unfixed-bugs.
+- When visiting the site on a mobile device, the search bar is only functional from the shop-floor i.e., where all the plants are displayed. When in full-screen, the search bar is functional throughout the site and if there is no value provided in the search bar and a search is conducted, an error will be thrown and the user redirected to view all plant products. I do not currently know why this is not the case in mobile view.
 
 ***
 
