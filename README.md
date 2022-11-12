@@ -68,7 +68,7 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   - the typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
   - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). Which was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
 - Accessibility
-  The website was designed with accessibility in mind, by providing alt attributes for all img elements and being mindful of visual impairment when designing the website. For example, originally I had a hover effect to increase font-size on footer links. After consideration this was removed as the hover effect caused vertical displacement.
+  - The website was designed with accessibility in mind, by providing alt attributes for all img elements and being mindful of visual impairment when designing the website. For example, originally I had a hover effect to increase font-size on footer links. After consideration this was removed as the hover effect caused vertical displacement.
 
 ***
 
@@ -228,8 +228,8 @@ To make an admin account for a deployed Heroku site:
 ### Features Left to Implement 
 
 - Update preloader to be more themed to the site.
- - This has not yet been done due to time constraints, so [Bootstrap's spinners](https://getbootstrap.com/docs/5.2/components/spinners/#about) have been used as an interim. 
- - In the future, I will work to replace the Bootstrap spinner with either this [potted-plant](https://icons8.com/icon/OKMC0MrrQY5I/potted-plant) or [plant in sunshine](https://icons8.com/icon/YW744aCDWOMe/plant) preloader.
+  - This has not yet been done due to time constraints, so [Bootstrap's spinners](https://getbootstrap.com/docs/5.2/components/spinners/#about) have been used as an interim. 
+  - In the future, I will work to replace the Bootstrap spinner with either this [potted-plant](https://icons8.com/icon/OKMC0MrrQY5I/potted-plant) or [plant in sunshine](https://icons8.com/icon/YW744aCDWOMe/plant) preloader.
 
 - Add digital wallets for easier checkout.
   - This would make checkout simpler and faster for the user by paying with the click of a button rather than filling out their card details into the Stripe input.
@@ -501,6 +501,7 @@ To fork this project go to the top left of the repository, where you see the For
 - The Returns Policy was generated with [Termly's Return and Refund Policy Generator](https://termly.io/products/refund-return-policy-generator/).
 - The Shipping and Delivery Policy was generated with [Termly's Shipping Policy Generator](https://termly.io/products/shipping-policy-generator/) and adapted.
 - Frequently asked questions and answers content was sampled from the houseplant shop [Bloombox Club](https://bloomboxclub.com/).
+- Plant descriptions were adapted from the plant identifier app [PictureThis](https://www.picturethisai.com/)' plant descriptions.
 
 ### Media
 
