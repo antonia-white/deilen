@@ -221,6 +221,7 @@ Here are the issues tracked that have been closed and working as intended:
 - AuthenticationError at /checkout/ [#22](https://github.com/antonia-white/deilen/issues/22)
 - SMTPRecipientsRefused at /checkout/checkout_success [#23](https://github.com/antonia-white/deilen/issues/23)
 - ValueError at /bag/add/3/ invalid literal for int() with base 10: [#24](https://github.com/antonia-white/deilen/issues/24)
+- TypeError at / join() argument must be str, bytes, or os.PathLike object, not 'dict' [#25](https://github.com/antonia-white/deilen/issues/25)
 
 ***
 
