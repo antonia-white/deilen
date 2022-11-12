@@ -27,43 +27,65 @@
         <h2 class="text-center">Why keep plants?</h2>
         <!-- Wellbeing -->
         <figure class="card col-12 col-xl-4 p-3 info-card">
-            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="Woman reading surrounded by plants" class="img-fluid info-card-img position-relative">
-            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Wellbeing</h4>
-            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Plants are great for our personal wellbeing. Research has shown time and time again that being around foliage and greenery does wonders for our physical and mental health - so thank you to our photosynthesising friends!</p>
+            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="Woman reading surrounded by plants"
+                class="img-fluid info-card-img position-relative">
+            <h4
+                class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">
+                Wellbeing</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black small-screen-text">Plants
+                are great for our personal wellbeing. Research has shown time and time again that being around foliage
+                and greenery does wonders for our physical and mental health - so thank you to our photosynthesising
+                friends!</p>
         </figure>
         <!-- Air purifying -->
         <figure class="card col-12 col-xl-4 p-3 info-card">
-            <img src="{{ MEDIA_URL }}air-img.jpg" alt="Plant mister spraying" class="img-fluid info-card-img position-relative">
-            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Air Purifying</h4>
-            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Plants are natures natural air purifiers, it only makes sense that they'll improve air quality in your home too! Houseplants have been shown to reduce levels of pollutants in the home and raise air humidity. So, breathe deep! </p>
+            <img src="{{ MEDIA_URL }}air-img.jpg" alt="Plant mister spraying"
+                class="img-fluid info-card-img position-relative">
+            <h4
+                class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">
+                Air Purifying</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black small-screen-text">Plants
+                are natures natural air purifiers, it only makes sense that they'll improve air quality in your home
+                too! Houseplants have been shown to reduce levels of pollutants in the home and raise air humidity. So,
+                breathe deep! </p>
         </figure>
         <!-- Aesthetics -->
         <figure class="card col-12 col-xl-4 p-3 info-card">
-            <img src="{{ MEDIA_URL }}aesthetics-img.jpg" alt="Living room with plants" class="img-fluid info-card-img position-relative">
-            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Aesthetics</h4>
-            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">A well cared for and flourishing houseplant sits gorgeously in a home, breathing life into an indoor space. A plant can complement any space, no matter the size or theme - we have the perfect plant for you!</p>
+            <img src="{{ MEDIA_URL }}aesthetics-img.jpg" alt="Living room with plants"
+                class="img-fluid info-card-img position-relative">
+            <h4
+                class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">
+                Aesthetics</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black small-screen-text">A well
+                cared for and flourishing houseplant sits gorgeously in a home, breathing life into an indoor space. A
+                plant can complement any space, no matter the size or theme - we have the perfect plant for you!</p>
         </figure>
     </div>
     <hr>
     <!-- Why Deilen -->
     <div class="row pink-background">
-            <h2 class="col-12 col-md-2 text-center mt-4">Why Deilen?</h2>
-            <p class="col-12 col-md-10 pt-4">We are a small family run business in the Brecon Beacons, central Wales. Surrounded by dramatic mountains and Welsh countryside, we ensure that all the plants we grow soak up the essence of their surrounding. We put love into every single plant we deliver, working our hardest to ensure customer satisfaction, every time. If you're looking for houseplants, we can guarantee that we can match the plant quality of other distributors. So please, support our small family run business and let a little bit of Wales into your home!</p>
+        <h2 class="col-12 col-md-2 text-center mt-4">Why Deilen?</h2>
+        <p class="col-12 col-md-10 pt-4">We are a small family run business in the Brecon Beacons, central Wales.
+            Surrounded by dramatic mountains and Welsh countryside, we ensure that all the plants we grow soak up the
+            essence of their surrounding. We put love into every single plant we deliver, working our hardest to ensure
+            customer satisfaction, every time. If you're looking for houseplants, we can guarantee that we can match the
+            plant quality of other distributors. So please, support our small family run business and let a little bit
+            of Wales into your home!</p>
     </div>
     <hr>
 </div>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         // Info card fade and text reveal
         $(".info-card-text").hide();
-        $(".info-card").on("mouseover", function() {
+        $(".info-card").on("mouseover", function () {
             $(this).children(".info-card-header").fadeToggle().finish();
             $(this).children(".info-card-text").fadeToggle().finish();
             $(this).children(".info-card-img").addClass("info-card-fade");
         });
 
-        $(".info-card").on("mouseout", function() {
+        $(".info-card").on("mouseout", function () {
             $(this).children(".info-card-header").fadeToggle().finish();
             $(this).children(".info-card-text").fadeToggle().finish();
             $(this).children(".info-card-img").removeClass("info-card-fade");
