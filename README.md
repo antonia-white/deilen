@@ -207,7 +207,22 @@ __Django Admin__
   
   ![Django admin screenshot](documentation/testing/django-admin.png)
 
-<!-- TODO: how to make an admin -->
+
+### Making an admin account
+
+Admin accounts are defined as superusers and have to be made a specific way, different to a normal Deilen customer account.
+
+To make an admin account for your local workspace:
+  - In the CLI run `python3 manage.py createsuperuser` then provide an admin username and password. 
+  - You can then login to your admin account with this username and password to get admin priveleges.
+
+To make an admin account for a deployed Heroku site:
+  - Ensure your git repository is connected to the Heroku app.
+  - Make sure a remote has been established for the Heroku app (you can check this by running `git remote -v` in your terminal).
+  - You will now need to login to your Heroku account in the CLI, to do this run `heroku login -i` and provide your Heroku email address associated with your account and account password.
+  - Ensure all migrations have been made to the Heroku app.
+  - Create a superuser by running `heroku run python3 manage.py createsuperuser`.
+  - You can then login to your admin account with this username and password to get admin priveleges.
 
 
 ### Features Left to Implement 
