@@ -17,7 +17,7 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   1. User Authentication / Accounts
      - Site users should be able to register an account that allows a user to sign in and out of the site.
      - A user should be able to create a profile to store personal information to make checkout easier with default personal information to automatically populate form fields at checkout.
-     - Users should be able to ammend profile information to keep records up-to-date and also have the ability to delete their account.
+     - Users should be able to ammend profile information to keep records up-to-date.
      - A user should be able to reset their password via email authentication so the account is not lost if the password is forgotten.
   2. Site Navigation
      - Site users should be able to navigate fluidly throughout the website without having to use the back button.
@@ -37,15 +37,19 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   5. User Checkout
      - A user should be able to checkout securely and pay for their order, finalising the transaction and confirming delivery address.
      - Site users should be able to checkout and purchase products regardless of if they have a Deilen account or not.
+     - Once checked-out, a customer should recieve confirmation of their order.
   6. Profiles
       - Site users should be able to create a profile to store their default delivery address, which will auto-populate the checkout view. 
       - Site users should also be able to view their previous order history.
       - Profile users should be able to signin, signout, view their profile and ammend their default delivery information. 
+  7. Contact
+      - All site users should have the ability to contact Deilen.
   8.  Site Admin
       - Site admins should have secure access to product manipulation.
       - Admins will be able to add new products.
       - Admins will be able to edit existing products.
       - Admins will be able to delete products from the store.
+      - See all orders, products, product categories, and customer messages.
 
 ***
 
@@ -64,7 +68,7 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   - the typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
   - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). Which was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
 - Accessibility
-  The website was designed with accessibility in mind, by providing alt attributes for all img elements and being mindfu of visual impairment when designing the website. For example, originally I had a hover effect to increase font-size on footer links. After consideration this was removed as the hover effect caused verticle displacement.
+  The website was designed with accessibility in mind, by providing alt attributes for all img elements and being mindful of visual impairment when designing the website. For example, originally I had a hover effect to increase font-size on footer links. After consideration this was removed as the hover effect caused vertical displacement.
 
 ***
 
@@ -101,11 +105,13 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
 
 ### Existing Features 
 
+<!-- TODO: -->
+
 __Navigation Bar__
-  - Allows the user to navigate around the Deilen site. The Deilen logo will direct the user to the homepage, there are also Profile buttons and a button to take a user to their Shopping Cart or "wheelbarrow". The wheelbarrows icon signal if there are items currently sitting in the bag.
+  - Allows the user to navigate around the Deilen site. The Deilen logo will direct the user to the homepage, there's an Account Management button with dropdown options relating to profile creation and login, there's a Plants button for easy access to the shop floor, and there's a button to take a user to their Shopping Cart or "wheelbarrow". The wheelbarrows icon changes to blue if there are items currently sitting in the bag.
   - The search bar allows users to search for a keyterm throughout the site, this is useful if the user has a particular product in mind to purchase.
   - Buttons will be available to the user depending on whether they are logged into their account or not.
-  - The mobile navbar condenses all the same elements into a burger menu, this retains screensaver for other elements e.g., products.
+  - The mobile navbar condenses all the same elements into a burger menu, this retains screenspace for other elements e.g., products.
   ![Nav Bar](documentation/testing/navbar.png)
   ![Mobile Nav Bar](documentation/testing/mobile-navbar.png)
   
@@ -117,19 +123,28 @@ __Navigation Bar__
   __Homepage__
   - The homepage consists of a eye-catching photo to instantly suggest the purpose of the website to the user.
   - There is a section dedicated to advertising company special offers, currently on display is the Halloween offer where free delivery is granted to orders over £666.
-  - On the homepage there are also buttons to direct the user to the main shop i.e., to view the plant products and .....
+  - On the homepage there is a button overlaying the main image to direct the user to the main shop.
+  - Below this are three beautifully styled info cards which inform the reader of why they should buy houseplants.
+  - Finally, the last feature on the homepage is a section dedicated to Deilen and why someone should shop at this store rather than competitors.
   ![Homepage](documentation/testing/homepage.png)
   
   __Shop Floor__
   - The shop floor displays the plants that the user is able to buy through the website.
   - Each plant has its own card, the user can see to which category the plant belongs e.g., if the plant is an air purifier or a succulent. The user can also see at a glance the care difficulty of the plant - this informs clients of the attention and care a plant needs and can therefore decide if a plant is suitable for its intended purpose.
-  - Each plant product displays a price per item as well as a field to select a quantity of the product (max quantity selection is 99 items of a single product).
   ![Shop Floor](documentation/testing/shop-floor.png)
-  
+
+  __Plant Details__
+  - Each plant detail page shows the product name, price, plant type, care difficulty, and product description.
+  - From this page, users can select a quantity of the product (within the range 1-99) and add the product to their wheelbarrow.
+  - It's important to note that users will be unable to select a quantity less than one or greater than 99. This prevents errors when ordering.
+  ![Shop Floor](documentation/testing/plant-detail.png)
+
   __Product Filtering__
-  - Describe the feature and what it allows a user to do.
-  - Does the feature have any defensive programming?
-  ![Product filtering](documentation/testing/product-filtering.png)
+  - From the shop floor, users will be able to filter plant products based on the product price, alphabetically as well as filtering by plant type and plant care difficulty.
+  - This allows users to shop a more selective list of products if they are looking for something specific.
+  ![Product filtering](documentation/testing/filter-all.png)
+  ![Product filtering by type](documentation/testing/filter-type.png)
+  ![Product filtering by difficulty](documentation/testing/filter-difficulty.png)
   
   __Shopping Bag ("Wheelbarrow")__
   - The wheelbarrow is always accessible to users, even when empty. The wheelbarrow allows users to view what is currently in their bag for purchase. From here, a user can amend their order, continue shopping or proceed to checkout.
@@ -137,24 +152,43 @@ __Navigation Bar__
   
   __Checkout__
   - Once item(s) have been added to the wheelbarrow the user will then be able to checkout. Upon checkout there is a brief review of the users basket i.e., what they intend to purchase. The user will then be required to fill out their delivery information and then proceed to fill out their payment information. Once payment is completed the order is made.
-  - Does the feature have any defensive programming?
+  - A user will also be prompted to make an account at Deilen in order to store their delivery information to speed up future checkouts.
   ![Checkout](documentation/testing/checkout.png)
 
-__Feature__
-  - Describe the feature and what it allows a user to do.
-  - Does the feature have any defensive programming?
-  ![Picture of feature](documentation/testing/example.png) 
+  __Order Confirmation__
+  - One payment has been processed and an order created, a user will be directed to an order confimation page listing their order details and a button to redirect back to the store. Additionally, there will be a toast alerting the user of their order success and a confirmation email will be sent to the email adress the customer provided.
+  ![Order confirmation page](documentation/testing/order-confirmation-page.png)
+  ![Order confirmation email](documentation/testing/order-confirmation-email.png)
+
+__Contact Us__
+  - If a user wants to contact Deilen, they can do so by filling out the form on the Contact Us page. Once the user has submitted this form they will be redirected to a success page to inform them that their message has been recieved and the company will be in touch shortly. An admin can see submitted contact forms in the django admin for the site.
+  ![Contact Us page](documentation/testing/contact-form.png) 
+  ![Message recieved page](documentation/testing/message-recieved.png) 
+
+__Account Management__
+  - A user is able to create a profile by registering an account. Having an account allows users to save delivery details for faster checkout and to view past order history.
+  - A user can navigate and manage their account by using the button dropdown in the navbar.
+  - A user can sign in and out of their account, they are also able to reset their password via email authentication. The back-end functionality of accounts is handles by django-allauth.
+  ![Register](documentation/testing/register.png) 
+
+__Profile__
+  - A user's profile displays the user's past order confirmations alongside their default delivery information. Delivery information can be edited and saved in their profile to ensure their account details are always accurate.
+  ![Order history](documentation/testing/order-history.png) 
+  ![Order summary](documentation/testing/order-summary.png) 
+  ![Update profile](documentation/testing/update-profile.png) 
 
 ### Admin Features
 
 Description of what admins have control over
 
-__Feature__
+__Admin Product Manipulation__
 
   - Describe the feature and what it allows a admin to do.
   - Does the feature have any defensive programming?
 
   ![Picture of feature](documentation/testing/example.png)
+
+<!-- TODO: how to make an admin -->
 
 
 ### Features Left to Implement 
