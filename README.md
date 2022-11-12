@@ -17,16 +17,16 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   1. User Authentication / Accounts
      - Site users should be able to register an account that allows a user to sign in and out of the site.
      - A user should be able to create a profile to store personal information to make checkout easier with default personal information to automatically populate form fields at checkout.
-     - Users should be able to ammend profile information to keep records up-to-date.
-     - A user should be able to reset their password via email authentication so the account is not lost if the password is forgotten.
+     - Users should be able to amend profile information to keep records up-to-date.
+     - A user should be able to reset their password via email so the account is not lost if the password is forgotten.
   2. Site Navigation
      - Site users should be able to navigate fluidly throughout the website without having to use the back button.
-     - A user should be able to direct themselves through the site with confidence and clarity to where they are navigating too.
+     - A user should be able to direct themselves through the site with confidence and clarity to where they are navigating to.
      - Users should be able to search the site for specific related content that they seek.
   3. Shopping
-     -  Users should be able to view the products that Deilen offer for purchase.
-     - A user should be able to add any products they want to buy to their bag for review.
-     - A user should be able to add multiples of an item to their bag if they so wish.
+     - Users should be able to view the products that Deilen offer for purchase.
+     - A user should be able to add any products they want to buy to their shopping bag for review.
+     - A user should be able to add multiples of an item to their shopping bag if they so wish.
      - Users should be able to filter and sort results based on their shopping goals.
      - Site users should be able to view all product information before adding a product to their bag.
   4. Bag (Wheelbarrow)
@@ -37,15 +37,15 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
   5. User Checkout
      - A user should be able to checkout securely and pay for their order, finalising the transaction and confirming delivery address.
      - Site users should be able to checkout and purchase products regardless of if they have a Deilen account or not.
-     - Once checked-out, a customer should recieve confirmation of their order.
+     - Once checked-out, a customer should receive confirmation of their order.
   6. Profiles
       - Site users should be able to create a profile to store their default delivery address, which will auto-populate the checkout view. 
       - Site users should also be able to view their previous order history.
-      - Profile users should be able to signin, signout, view their profile and ammend their default delivery information. 
+      - Profile users should be able to signin, signout, view their profile and amend their default delivery information. 
   7. Contact
       - All site users should have the ability to contact Deilen.
   8.  Site Admin
-      - Site admins should have secure access to product manipulation.
+      - Site admins should have secure access to product management.
       - Admins will be able to add new products.
       - Admins will be able to edit existing products.
       - Admins will be able to delete products from the store.
@@ -56,17 +56,17 @@ To visit the website, please visit the deployed site [here](https://deilen-shop.
 ## UX
 
 ### Colour Scheme
-- A earthy and natural blend of pastel pink yellow and green with darker shadesof clay-brown and blue-grey. This gives the website a fresh, organic and natural look.
+- An earthy and natural blend of pastel pink yellow and green with darker shades of clay-brown and blue-grey. This gives the website a fresh, organic and natural look.
     >![colour palette](documentation/testing/deilen-colours.png)
-- No accessibility issues were returned when passing the colour scheme through the official [WebAIM](https://webaim.org/resources/contrastchecker/).
+- No accessibility issues were returned when passing the colour scheme through the official [WebAIM contrast checker](https://webaim.org/resources/contrastchecker/).
     >![webaim screenshot](documentation/testing/webaim-screenshot.png)
 
 ### Typography
 
 - Google Fonts
   Font styles were taken from the open source [Google Fonts](https://fonts.google.com/).
-  - the typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
-  - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). Which was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
+  - The typography for the text throughout the website is [Work Sans](https://fonts.google.com/specimen/Work+Sans). This font was designed by Wei Huang and is optimised for on-screen text usage at medium-sizes (14px-48px). Overall, features are simplified and optimised for screen resolutions; for example, diacritic marks are larger than how they would be in print. This font is loosely based on early Grotesques and, in my opinion, gives the website a crisp feel.
+  - The typography for the brand logo and page titles is font-family [Corben](https://fonts.google.com/specimen/Corben). This was designed by Vernon Adams Corben as a simple web friendly display font with ample curves and ligatures. Corben is designed to be easy on the eye with a touch of classic display lettering. For me, Corben gives the logo and headers a classic, sophisticated feel. 
 - Accessibility
   - The website was designed with accessibility in mind, by providing alt attributes for all img elements and being mindful of visual impairment when designing the website. For example, originally I had a hover effect to increase font-size on footer links. After consideration this was removed as the hover effect caused vertical displacement.
 
@@ -128,7 +128,7 @@ __Navigation Bar__
   
   __Shop Floor__
   - The shop floor displays the plants that the user is able to buy through the website.
-  - Each plant has its own card, the user can see to which category the plant belongs e.g., if the plant is an air purifier or a succulent. The user can also see at a glance the care difficulty of the plant - this informs clients of the attention and care a plant needs and can therefore decide if a plant is suitable for its intended purpose.
+  - Each plant has its own info card where the user can see to which category the plant belongs e.g., if the plant is an air purifier or a succulent. The user can also see at a glance the care difficulty of the plant - this informs clients of the attention and care a plant needs and can therefore decide if a plant is suitable for its intended purpose.
   ![Shop Floor](documentation/testing/shop-floor.png)
 
   __Plant Details__
@@ -159,14 +159,14 @@ __Navigation Bar__
   ![Order confirmation email](documentation/testing/order-confirmation-email.png)
 
 __Contact Us__
-  - If a user wants to contact Deilen, they can do so by filling out the form on the Contact Us page. Once the user has submitted this form they will be redirected to a success page to inform them that their message has been recieved and the company will be in touch shortly. An admin can see submitted contact forms in the django admin for the site.
+  - If a user wants to contact Deilen, they can do so by filling out the form on the Contact Us page. Once the user has submitted this form they will be redirected to a success page to inform them that their message has been received and the company will be in touch shortly. An admin can see submitted contact forms in the django admin for the site.
   ![Contact Us page](documentation/testing/contact-form.png) 
-  ![Message recieved page](documentation/testing/message-recieved.png) 
+  ![Message received page](documentation/testing/message-recieved.png) 
 
 __Account Management__
   - A user is able to create a profile by registering an account. Having an account allows users to save delivery details for faster checkout and to view past order history.
   - A user can navigate and manage their account by using the button dropdown in the navbar.
-  - A user can sign in and out of their account, they are also able to reset their password via email authentication. The back-end functionality of accounts is handles by django-allauth.
+  - A user can sign in and out of their account, they are also able to reset their password via email verification. The back-end functionality of accounts is handled by django-allauth.
   ![Register](documentation/testing/register.png) 
 
 __Profile__
@@ -178,7 +178,7 @@ __Profile__
 
 ### Admin Features
 
-Only admins have access to product manipulation and only admins can view all orders, products, product categories, and customer messages. Please see [TESTING.md](TESTING.md)'s defensive programming section to see how I prevented general site users from accessing admin features.
+Only admins have access to product management and only admins can view all orders, products, product categories, and customer messages. Please see [TESTING.md](TESTING.md)'s defensive programming section to see how I prevented general site users from accessing admin features.
 
 __Adding Plants__
   - An admin has the ability to add new products by navigating to the product management section under their account, which of course requires an admin signin. Completing and submitting the add plant form will result in a new product being displayed on the site. This will create a permenant object in the database which will remain until updated or deleted. Users will now be able to purchase this product.
@@ -214,7 +214,7 @@ Admin accounts are defined as superusers and have to be made a specific way, dif
 
 To make an admin account for your local workspace:
   - In the CLI run `python3 manage.py createsuperuser` then provide an admin username and password. 
-  - You can then login to your admin account with this username and password to get admin priveleges.
+  - You can then login to your admin account with this username and password to get admin privileges.
 
 To make an admin account for a deployed Heroku site:
   - Ensure your git repository is connected to the Heroku app.
@@ -222,7 +222,7 @@ To make an admin account for a deployed Heroku site:
   - You will now need to login to your Heroku account in the CLI, to do this run `heroku login -i` and provide your Heroku email address associated with your account and account password.
   - Ensure all migrations have been made to the Heroku app.
   - Create a superuser by running `heroku run python3 manage.py createsuperuser`.
-  - You can then login to your admin account with this username and password to get admin priveleges.
+  - You can then login to your admin account with this username and password to get admin privileges.
 
 
 ### Features Left to Implement 
@@ -237,11 +237,11 @@ To make an admin account for a deployed Heroku site:
   - Please see the [Stripe Docs](https://stripe.com/docs/issuing/cards/digital-wallets) explaining how digital wallets can be intergrated into Stripe in the US.
 
 - Auto populate countries field with the value 'United Kingdom' as Deilen are currently unable to ship abroad.
-  - This would be useful to prevent users having to needlessly scroll through the country input to select the UK - as this is currentlythe only shipping destination.
+  - This would be useful to prevent users having to needlessly scroll through the country input to select the UK - as this is currently the only shipping destination.
   - I intend to implement this feature by following this [documentation](https://pypi.org/project/django-countries/#show-certain-countries-first) and discourse on [this stackoverflow thread](https://stackoverflow.com/questions/44025372/setting-a-default-value-in-choicfield-in-django).
 
 - Checkout Webhooks
-  - Adds redundancy to the order payment incase the browser is closed after the payment is confirmaed but before the order form has been submitted. This would stop the chance of payment going through without the order having been created.
+  - Adds redundancy to the order payment in case the browser is closed after the payment is confirmed but before the order form has been submitted. This would stop the chance of payment going through without the order having been created.
   - I would follow the [Stripe documentation](https://stripe.com/docs/webhooks) on webhooks and follow Code Institute's walkthrough project in order to implement webhooks in my site.
 
 ***
@@ -257,7 +257,7 @@ To make an admin account for a deployed Heroku site:
 - [Bootstrap](https://getbootstrap.com/) was used for website layout and responsive components
 - [AWS S3 Buckets](https://aws.amazon.com/products/storage/?hp=tile&tile=solutions) was used to provide storage of static and media files for the deployed site.
 - [Gmail](https://mail.google.com/mail) was used for an STMP server to send company emails
-- [PostgreSQL](https://www.postgresql.org/) was used as the projects database management system 
+- [PostgreSQL](https://www.postgresql.org/) was used as the project's database management system 
 - [Google Fonts](https://fonts.google.com/) was used to provide website fonts and icons
 - [Am I Responsive](http://ami.responsivedesign.is/) was used to generate a mock-up image
 - [Dev Tools](https://en.wikipedia.org/wiki/Web_development_tools) was used for testing and responsiveness

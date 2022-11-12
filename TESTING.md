@@ -298,7 +298,7 @@ A target user of the Deilen website will want to:
    >![Shop floor](documentation/testing/shop-floor.png)
 
 - [x] Filter Deilen products
-   >Products can be filtered by plant type, care difficulties, price and alphabetically. Users are aslo albe to search specific keywords in the search bar.
+   >Products can be filtered by plant type, care difficulties, price and alphabetically. Users are also able to search specific keywords in the search bar.
    >![Filter all plants](documentation/testing/filter-all.png)
    >![Filter by plant type](documentation/testing/filter-type.png)
    >![Filter by care difficulty](documentation/testing/filter-difficulty.png)
@@ -307,34 +307,34 @@ A target user of the Deilen website will want to:
    >Users can purchase products by adding the desired quantities to their wheelbarrow (shopping bag) and continuing with checkout to pay and finalise their order.
    >![Add product to bag](documentation/testing/product-detail.png)
 
-- [x] Ammend their order
-   >In the wheelbarrow (shopping bag) users will be giver an overview of their proposed purchase. Users can then ammend quantities of an item, remove items competley and continue shopping if they desire. At checkout, users will again be given an overview of their bag and prompted again to ammend their order if neccessary.
-   >![Ammend order](documentation/testing/order-summary.png)
+- [x] Amend their order
+   >In the wheelbarrow (shopping bag) users will be giver an overview of their proposed purchase. Users can then amend quantities of an item, remove items competely and continue shopping if they desire. At checkout, users will again be given an overview of their bag and prompted again to amend their order if neccessary.
+   >![Amend order](documentation/testing/order-summary.png)
 
 - [x] See an order summary with all cost details
    >An order summary is listed in the wheelbarrow and again at checkout showing all costs and total cost of the purchase. There are no hidden costs. The amount that a user will be charged is clearly displayed before purchase.
    >![Order summary](documentation/testing/order-summary.png)
 
-- [x] Checkout safley and securley
+- [x] Checkout safely and securely
    >The site uses Stripe Payments to acheive safe and secure transactions. More can be read about this at [Stripe.com](https://stripe.com/en-gb).
    >![Strip payment](documentation/testing/payment.png)
 
-- [x] Recieve order confirmation
+- [x] Receive order confirmation
    >Once an order has been made, the user will be shown the checkout success page which informs the user that their order has been processed. Email confirmation will also be sent to the user. Additionally, if a user has a profile they will be able to see processed order in their order history on their profile.
    >![Order confirmation page](documentation/testing/order-confirmation-page.png)
    >![Order confirmation email](documentation/testing/order-confirmation-email.png)
 
 - [x] Contact Deilen
-   >Store users will nee to be able to contact Deilen if they have any questions or need help with their order. The website has multiple useful links in the footer which outline compnay policy on returns and refunds, delivery and shipping, terms and condidtions, and provacy policy as well as an FAQs section. These links are full of customer information they may wish to ead before making a purchase. If store users have any other queires or concerns, there is a contact us section where a form is submitted with a customer message.
+   >Store users will need to be able to contact Deilen if they have any questions or need help with their order. The website has multiple useful links in the footer which outline company policy on returns and refunds, delivery and shipping, and privacy policy as well as an FAQ section. These links are full of customer information they may wish to read before making a purchase. If store users have any other queries or concerns, there is a contact us section where a form is submitted with a customer message.
    >![Contact form](documentation/testing/contact-form.png)
 
 - [x] Manage their account
-   >Users are able to login, logout, register, confirm their email addresses, and reset their password. All of this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
+   >Users are able to login, logout, register, confirm their email address, and reset their password. All of this functionality is handled by [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
 
-A admin of the Deilen website will want to:
+An admin of the Deilen website will want to:
 
-- [x] Have secure access to product manipulation
-   >Login is required to access any urls regarding product management. If the user logged in is not identified as an admin of the site, they will be redirected and thrown an error. Only admins have access to admin priviledges.
+- [x] Have secure access to product management
+   >Login is required to access any urls regarding product management. If the user logged in is not identified as an admin of the site, they will be redirected and thrown an error. Only admins have access to admin privileges.
    >![Admin defensive programming](documentation/testing/admin-security.png)
 
 - [x] Add new products
@@ -343,11 +343,11 @@ A admin of the Deilen website will want to:
    >![Add product](documentation/testing/add.png)
 
 - [x] Edit existing products
-   >From a products details page, an admin can easily update the details of said product.
+   >From a product's details page, an admin can easily update the details of said product.
    >![Admin controls](documentation/testing/admin-update-delete.png)
 
 - [x] Delete products
-   >From a products details page, an admin can easily delete said product. Before deletion a modal is triggered to ensure no accidental deletion.
+   >From a product's details page, an admin can easily delete said product. Before deletion a modal is triggered to ensure no accidental deletion.
    >![Delete modal](documentation/testing/delete.png)
 
 - [x] View all orders, products, product categories, and customer messages
@@ -358,11 +358,11 @@ A admin of the Deilen website will want to:
 
 ## Defensive Programming Testing
 
-- Code implemented on all admin features to require user login and to verify that the logged in user has admin status. If a user is not logged in or is not an admin, they will be redirected and unable to perform admin privileges. This works even when trying to brute force a url.
-  `@login_required` on admin views to require user to be logged in. The following code was user to verify admin status:
+- Code is implemented on all admin features to require user login and to verify that the logged in user has admin status. If a user is not logged in or is not an admin, they will be redirected and unable to perform admin privileges. This works even when trying to brute force a url.
+  `@login_required` on admin views to require user to be logged in. The following code was used to verify admin status:
   ```
   if not request.user.is_superuser:
         messages.error(request, "Sorry, no access - admins only!")
         return redirect(reverse("home"))
   ```
-  If the user is a superuser i.e., admin, then they will not be redirected and will have access to admin functionality. This functionality was manually tested and deemed to be functioning correctly.
+  If the user is a superuser i.e., admin, then they will not be redirected and will have access to admin functionality. This functionality was manually tested and is functioning correctly.
