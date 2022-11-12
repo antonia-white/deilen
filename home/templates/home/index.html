@@ -23,79 +23,52 @@
     </div>
     <hr>
     <!-- Why keep plants -->
-    <div class="row main-container">
+    <div class="row">
         <h2 class="text-center">Why keep plants?</h2>
-        <figure class="card col-12 col-md-3 p-3 border info-card">
-            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="" class="img-fluid info-card-img position-relative">
-            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-white">Wellbeing</h4>
-            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Blah blah text to display for wellbeing</p>
+        <!-- Wellbeing -->
+        <figure class="card col-12 col-xl-4 p-3 info-card">
+            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="Woman reading surrounded by plants" class="img-fluid info-card-img position-relative">
+            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Wellbeing</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Plants are great for our personal wellbeing. Research has shown time and time again that being around foliage and greenery does wonders for our physical and mental health - so thank you to our photosynthesising friends!</p>
         </figure>
-        <div id="wellbeing-card" class="col-sm-12 col-md-3 p-3 border info-card">
-            <img src="{{ MEDIA_URL }}wellbeing-img.jpg" alt="" class="img-fluid">
-            <h4 id="wellbeing-title" class= "text-center logo-font position-relative top-50 start-50 translate-middle">Wellbeing</h4>
-        </div>
-        <div id="air-card" class="col-sm-12 col-md-3 p-3 border info-card">
-            <img src="{{ MEDIA_URL }}air-img.jpg" alt="" class="img-fluid">
-            <h4 id="air-title" class="info-title text-center logo-font position-relative top-50 start-50 translate-middle">Air purifying</h4>
-        </div>
-        <div id="aesthetics-card" class="col-sm-12 col-md-3 p-3 border info-card">
-            <img src="{{ MEDIA_URL }}aesthetics-img.jpg" alt="" class="img-fluid">
-            <h4 id="aesthetics-title" class="info-title text-center logo-font position-relative top-50 start-50 translate-middle">Aesthetics</h4>
-        </div>
+        <!-- Air purifying -->
+        <figure class="card col-12 col-xl-4 p-3 info-card">
+            <img src="{{ MEDIA_URL }}air-img.jpg" alt="Plant mister spraying" class="img-fluid info-card-img position-relative">
+            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Air Purifying</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">Plants are natures natural air purifiers, it only makes sense that they'll improve air quality in your home too! Houseplants have been shown to reduce levels of pollutants in the home and raise air humidity. So, breathe deep! </p>
+        </figure>
+        <!-- Aesthetics -->
+        <figure class="card col-12 col-xl-4 p-3 info-card">
+            <img src="{{ MEDIA_URL }}aesthetics-img.jpg" alt="Living room with plants" class="img-fluid info-card-img position-relative">
+            <h4 class="info-card-header text-center logo-font position-absolute top-50 start-50 translate-middle text-black">Aesthetics</h4>
+            <p class="info-card-text text-center position-absolute top-50 start-50 translate-middle text-black">A well cared for and flourishing houseplant sits gorgeously in a home, breathing life into an indoor space. A plant can complement any space, no matter the size or theme - we have the perfect plant for you!</p>
+        </figure>
     </div>
     <hr>
     <!-- Why Deilen -->
-    <div class="row main-container">
-
+    <div class="row pink-background">
+            <h2 class="col-12 col-md-2 text-center mt-4">Why Deilen?</h2>
+            <p class="col-12 col-md-10 p-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
     </div>
     <hr>
-    <!-- Register Account Section -->
-    <div class="row">
-        <div class="col-6 text-center">
-            <a href="{% url 'account_signup' %}">
-                <p class="btn btn-dark btn-lg pt-2">Register</p>
-            </a>
-        </div>
-    </div>
 </div>
 
-<!-- TODO: optimise -->
 <script>
     $(document).ready(function(){
-
-        // new example code
+        // Info card fade and text reveal
         $(".info-card-text").hide();
         $(".info-card").on("mouseover", function() {
-            $(this).children(".info-card-header").fadeToggle();
-            $(this).children(".info-card-text").fadeToggle();
-            $(this).children(".info-card-img").addClass("fade-bg");
+            $(this).children(".info-card-header").fadeToggle().finish();
+            $(this).children(".info-card-text").fadeToggle().finish();
+            $(this).children(".info-card-img").addClass("info-card-fade");
         });
-        $(".info-card").on("mouseout", function() {
-            $(this).children(".info-card-header").fadeIn();
-            $(this).children(".info-card-text").fadeOut();
-            $(this).children(".info-card-img").removeClass("fade-bg");
-        });
-        // end of new example code
 
-     $("#wellbeing-card").mouseover(function(){
-         $("#wellbeing-title").css("display", "none");
-     });
-     $("#wellbeing-card").mouseout(function(){
-         $("#wellbeing-title").css("display", "block");
-     });
-     $("#air-card").mouseover(function(){
-         $("#air-title").css("display", "none");
-     });
-     $("#air-card").mouseout(function(){
-         $("#air-title").css("display", "block");
-     });
-     $("#aesthetics-card").mouseover(function(){
-         $("#aesthetics-title").css("display", "none");
-     });
-     $("#aesthetics-card").mouseout(function(){
-         $("#aesthetics-title").css("display", "block");
-     });
-});
+        $(".info-card").on("mouseout", function() {
+            $(this).children(".info-card-header").fadeToggle().finish();
+            $(this).children(".info-card-text").fadeToggle().finish();
+            $(this).children(".info-card-img").removeClass("info-card-fade");
+        });
+    });
 </script>
 
 {% endblock %}

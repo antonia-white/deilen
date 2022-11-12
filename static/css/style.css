@@ -189,18 +189,22 @@ footer {
     color: #fcffff;
 }
 
-figure.info-card {
-    height: 250px;
-}
-
 .info-card-img {
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
 
-.info-card-img:hover {
+.info-card-fade {
     background-color: black;
     opacity: 0.5;
+}
+
+.card {
+    border: none;
+}
+
+.pink-background {
+    background-color: #f1dedc;
 }
 
 /* Plants page */
