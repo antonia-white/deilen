@@ -7,6 +7,7 @@
 {% block inner_content %}
 <h2 class="logo-font">{% trans "Sign Up" %}</h2>
 
+<p class="text-dark">With a Deilen account you can store your delivery details for faster checkout and see your previous order history in your profile - what's not to love!</p>
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
